@@ -106,8 +106,8 @@ section h2 {
 
 /* Adjust the image for side-by-side layout */
 #about img {
-  max-width: 200px;
-  width: 100%;
+  max-width: 300px;
+  width: 200%;
   border-radius: 50%;
   margin-bottom: 0; /* remove bottom margin if side by side */
   border: 4px solid #fff;
