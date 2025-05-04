@@ -31,7 +31,7 @@
           <h3>Medwell Pharmacy Patient Portal</h3>
           <p>Advanced pharmacy portal—Medwell OS—that streamlines operations and enhances patient care with medication tracking, real-time interaction checks, and prescription-label printing.</p>
           <p class="correlation">Built during my Bachelor of Computer Science at Swinburne University, collaborating in a team to improve healthcare technology.</p>
-          <a href="videos/medwell-demo.mkv" class="btn">View Demo</a>
+          <button class="btn" id="view-demo-btn">View Demo</button>
         </article>
 
         <article class="project-card">
@@ -96,10 +96,43 @@
 
   </main>
 
+  <!-- VIDEO MODAL -->
+  <div id="video-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <video controls>
+        <source src="videos/medwell-demo.mkv" type="video/mp4">
+        <!-- fallback text -->
+        Your browser doesn’t support HTML5 video.
+      </video>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Mehrab Bhuiyan. All rights reserved.</p>
   </footer>
+<!-- Modal script -->
+<script>
+    const btn = document.getElementById('view-demo-btn');
+    const modal = document.getElementById('video-modal');
+    const close = modal.querySelector('.close');
 
+    btn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+    close.addEventListener('click', () => {
+      modal.style.display = 'none';
+      // pause video when closing
+      modal.querySelector('video').pause();
+    });
+    // close when clicking outside content
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        modal.querySelector('video').pause();
+      }
+    });
+  </script>
 </body>
 </html>
