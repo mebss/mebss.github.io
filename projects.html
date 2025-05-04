@@ -8,131 +8,138 @@
 </head>
 <body>
 
-  <!-- HEADER & NAVIGATION -->
-  <header>
-    <h1>Mehrab Bhuiyan</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main>
-
-    <!-- COURSEWORK & PROFESSIONAL PROJECTS -->
-    <section id="coursework">
-      <h2>Coursework &amp; Professional Projects</h2>
-      <div class="projects-grid">
-
-        <article class="project-card">
-          <h3>Medwell Pharmacy Patient Portal</h3>
-          <p>Advanced pharmacy portal—Medwell OS—that streamlines operations and enhances patient care with medication tracking, real-time interaction checks, and prescription-label printing.</p>
-          <p class="correlation">Built during my Bachelor of Computer Science at Swinburne University, collaborating in a team to improve healthcare technology.</p>
-          <button class="btn" id="view-demo-btn">View Demo</button>
-        </article>
-
-        <article class="project-card">
-          <h3>Mental Wellness Tracker App</h3>
-          <p>Culture-inclusive mental wellness tracker integrating Te Tiriti o Waitangi principles. Full-stack development with secure data handling and an intuitive UI.</p>
-          <p class="correlation">Completed as a group project for my MSE800 Professional Engineering course at Yoobee College.</p>
-          <a href="https://github.com/mebss/MSE-800-Professional-Engineering-Group-Project-/tree/main/mental_wellness_tracker" target="_blank" class="btn">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Car Rental System (CLI)</h3>
-          <p>Python CLI app with OOP design, UML diagrams, modular architecture, and robust error handling for a seamless rental workflow.</p>
-          <p class="correlation">Developed as part of my Master’s Software Engineering coursework at Yoobee College.</p>
-          <a href="https://github.com/mebss/MSE800-Professional-Software-Engineering/tree/main/CarRentalSystem_Mehrab_Bhuiyan" target="_blank" class="btn">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Bus Tracking System</h3>
-          <p>PHP &amp; Dockerized full-stack app integrating live Auckland Transport data to auto-populate a map with real-time bus positions.</p>
-          <p class="correlation">Capstone-style project in my MSE804 Intelligent Transportation Systems module at Yoobee College.</p>
-          <a href="https://github.com/mebss/Bustrackingapp" target="_blank" class="btn">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Fitness Tracker Data Modeling &amp; Responsible Data Report</h3>
-          <p>Statistical analysis (regression, clustering) on fitness app data to predict engagement, plus ethical guidelines on anonymization and informed consent.</p>
-          <p class="correlation">Produced for my MSE803 Data Analytics course, blending technical modeling with ethical best practices.</p>
-          <a href="https://github.com/mebss/MSE803_Data_Analytics/tree/main/Assessment%202" target="_blank" class="btn">View on GitHub</a>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- SCRATCHPAD PROJECTS -->
-    <section id="scratchpad">
-      <h2>Scratchpad Projects</h2>
-      <div class="projects-grid">
-
-        <article class="project-card">
-          <h3>Turtle Snake Game</h3>
-          <p>Classic Snake in Python using Turtle—arrow-key movement, dynamic food spawning, score tracking, and speed ramp-up.</p>
-          <p class="correlation">Used as a hands-on demo in my Junior Technology Instructor role at Scratchpad NZ to teach event-driven programming with Turtle graphics.</p>
-          <a href="https://github.com/mebss/Turtle-Snake-Game" target="_blank" class="btn">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Number Guessing Game</h3>
-          <p>Terminal-based Python game: guess the sum of two dice with random animations and win/lose feedback.</p>
-          <p class="correlation">Created as an interactive exercise at Scratchpad NZ to demonstrate randomness, loops, and user input handling.</p>
-          <a href="https://github.com/mebss/Number-Guessing-Game" target="_blank" class="btn">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Library Management CLI</h3>
-          <p>Python console application for admins &amp; members to manage books, registration, borrowing, and overdue reports, backed by CSV files.</p>
-          <p class="correlation">Built for Scratchpad NZ workshops to illustrate file I/O and command-line interface design.</p>
-          <a href="https://github.com/mebss/Library-Management-CLI-" target="_blank" class="btn">View on GitHub</a>
-        </article>
-
-      </div>
-    </section>
-
-  </main>
-
   <!-- VIDEO MODAL -->
   <div id="video-modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <video controls>
         <source src="videos/medwell-demo.mkv" type="video/mp4">
-        <!-- fallback text -->
         Your browser doesn’t support HTML5 video.
       </video>
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Mehrab Bhuiyan. All rights reserved.</p>
-  </footer>
-<!-- Modal script -->
-<script>
-    const btn = document.getElementById('view-demo-btn');
+  <!-- PAGE CONTENT -->
+  <div id="page-content">
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+      <h1>Mehrab Bhuiyan</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- COURSEWORK & PROFESSIONAL PROJECTS -->
+      <section id="coursework">
+        <h2>Coursework &amp; Professional Projects</h2>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <h3>Medwell Pharmacy Patient Portal</h3>
+            <p>Advanced pharmacy portal—Medwell OS—that streamlines operations and enhances patient care with medication tracking, real-time interaction checks, and prescription-label printing.</p>
+            <p class="correlation">Built during my Bachelor of Computer Science at Swinburne University, collaborating in a team to improve healthcare technology.</p>
+            <button class="btn" id="view-demo-btn">View Demo</button>
+          </article>
+
+          <article class="project-card">
+            <h3>Mental Wellness Tracker App</h3>
+            <p>Culture-inclusive mental wellness tracker integrating Te Tiriti o Waitangi principles. Full-stack development with secure data handling and an intuitive UI.</p>
+            <p class="correlation">Completed as a group project for my MSE800 Professional Engineering course at Yoobee College.</p>
+            <a href="https://github.com/mebss/MSE-800-Professional-Engineering-Group-Project-/tree/main/mental_wellness_tracker" target="_blank" class="btn">View on GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Car Rental System (CLI)</h3>
+            <p>Python CLI app with OOP design, UML diagrams, modular architecture, and robust error handling for a seamless rental workflow.</p>
+            <p class="correlation">Developed as part of my Master’s Software Engineering coursework at Yoobee College.</p>
+            <a href="https://github.com/mebss/MSE800-Professional-Software-Engineering/tree/main/CarRentalSystem_Mehrab_Bhuiyan" target="_blank" class="btn">View on GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Bus Tracking System</h3>
+            <p>PHP &amp; Dockerized full-stack app integrating live Auckland Transport data to auto-populate a map with real-time bus positions.</p>
+            <p class="correlation">Capstone-style project in my MSE804 Intelligent Transportation Systems module at Yoobee College.</p>
+            <a href="https://github.com/mebss/Bustrackingapp" target="_blank" class="btn">View on GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Fitness Tracker Data Modeling &amp; Responsible Data Report</h3>
+            <p>Statistical analysis (regression, clustering) on fitness app data to predict engagement, plus ethical guidelines on anonymization and informed consent.</p>
+            <p class="correlation">Produced for my MSE803 Data Analytics course, blending technical modeling with ethical best practices.</p>
+            <a href="https://github.com/mebss/MSE803_Data_Analytics/tree/main/Assessment%202" target="_blank" class="btn">View on GitHub</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SCRATCHPAD PROJECTS -->
+      <section id="scratchpad">
+        <h2>Scratchpad Projects</h2>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <h3>Turtle Snake Game</h3>
+            <p>Classic Snake in Python using Turtle—arrow-key movement, dynamic food spawning, score tracking, and speed ramp-up.</p>
+            <p class="correlation">Used as a hands-on demo in my Junior Technology Instructor role at Scratchpad NZ to teach event-driven programming with Turtle graphics.</p>
+            <a href="https://github.com/mebss/Turtle-Snake-Game" target="_blank" class="btn">View on GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Number Guessing Game</h3>
+            <p>Terminal-based Python game: guess the sum of two dice with random animations and win/lose feedback.</p>
+            <p class="correlation">Created as an interactive exercise at Scratchpad NZ to demonstrate randomness, loops, and user input handling.</p>
+            <a href="https://github.com/mebss/Number-Guessing-Game" target="_blank" class="btn">View on GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Library Management CLI</h3>
+            <p>Python console application for admins &amp; members to manage books, registration, borrowing, and overdue reports, backed by CSV files.</p>
+            <p class="correlation">Built for Scratchpad NZ workshops to illustrate file I/O and command-line interface design.</p>
+            <a href="https://github.com/mebss/Library-Management-CLI-" target="_blank" class="btn">View on GitHub</a>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Mehrab Bhuiyan. All rights reserved.</p>
+    </footer>
+
+  </div> <!-- end #page-content -->
+
+  <!-- MODAL SCRIPT -->
+  <script>
+    const btn   = document.getElementById('view-demo-btn');
     const modal = document.getElementById('video-modal');
     const close = modal.querySelector('.close');
+    const page  = document.getElementById('page-content');
 
     btn.addEventListener('click', () => {
       modal.style.display = 'flex';
+      page.classList.add('blurred-content');
     });
-    close.addEventListener('click', () => {
+
+    function stopDemo() {
       modal.style.display = 'none';
-      // pause video when closing
+      page.classList.remove('blurred-content');
       modal.querySelector('video').pause();
-    });
-    // close when clicking outside content
+    }
+
+    close.addEventListener('click', stopDemo);
     modal.addEventListener('click', e => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-        modal.querySelector('video').pause();
-      }
+      if (e.target === modal) stopDemo();
     });
   </script>
+
 </body>
 </html>

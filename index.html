@@ -3,143 +3,196 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Mehrab Bhuiyan – Projects</title>
+  <title>Mehrab Bhuiyan - Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- VIDEO MODAL -->
-  <div id="video-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <video controls>
-        <source src="videos/medwell-demo.mkv" type="video/mp4">
-        Your browser doesn’t support HTML5 video.
-      </video>
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <h1>Mehrab Bhuiyan</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#volunteering">Volunteering</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="images/profile.jpg" alt="Profile Picture of Mehrab Bhuiyan">
+      <div class="section-content">
+        <p>
+          Hello! I'm <strong>Mehrab Bhuiyan</strong>, a passionate software engineer specializing in full stack development, IT support, and technology instruction. I'm driven by a love for solving complex problems and creating innovative solutions that seamlessly integrate technology with user-centric design.
+        </p>
+        <p>
+          Currently pursuing a Master's in Software Engineering, I aim to develop projects that not only push technological boundaries but also make a real-world impact. I'm always eager to learn new tools and embrace challenges that foster both professional growth and creative innovation.
+        </p>
+        <p>
+          Whether it's building cutting-edge applications or mentoring aspiring developers, I believe in continuous learning and delivering excellence in every project.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- PAGE CONTENT -->
-  <div id="page-content">
+  <!-- EDUCATION SECTION -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="section-content">
+      <ul>
+        <li>
+          <strong>Master’s Degree, Software Engineering</strong><br>
+          Yoobee College of Creative Innovation, Auckland, New Zealand<br>
+          <em>(Jul 2024 – Present)</em>
+        </li>
+        <li>
+          <strong>Bachelor of Computer Science</strong><br>
+          Swinburne University of Technology, Sarawak, Malaysia<br>
+          <em>(Mar 2021 – Dec 2023)</em>
+        </li>
+        <li>
+          <strong>Diploma of Education, Computer Engineering</strong><br>
+          Penang Skills Development Centre, Penang, Malaysia<br>
+          <em>(Feb 2018 – Sep 2020)</em>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- HEADER & NAVIGATION -->
-    <header>
-      <h1>Mehrab Bhuiyan</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html" class="active">Projects</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="section-content">
+      <ul>
+        <li><strong>Programming Languages:</strong> Python, C/C++, Java, Arduino, PHP, JavaScript, HTML/HTML5, CSS, Kotlin, C#, Rust</li>
+        <li><strong>Software Tools & Frameworks:</strong> MySQL, Laravel, Vue.js, AWS, Docker, Git</li>
+        <li><strong>Technical Skills:</strong> Full Stack Development, Network Troubleshooting, IT Infrastructure Management, Computing, Software Development</li>
+        <li><strong>Project Management & Planning:</strong> Agile Methodologies, Jira, Trello</li>
+        <li><strong>Soft Skills:</strong> Communication, Public Speaking, Time Management, Adaptability, Problem Solving, Leadership, Teamwork</li>
+        <li><strong>Teaching Skills:</strong> Curriculum Development, Workshop Facilitation, Classroom Management</li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- MAIN CONTENT -->
-    <main>
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="section-content">
 
-      <!-- COURSEWORK & PROFESSIONAL PROJECTS -->
-      <section id="coursework">
-        <h2>Coursework &amp; Professional Projects</h2>
-        <div class="projects-grid">
+      <p>
+        <strong>Data Analyst Intern</strong> – Favour <em>(Apr 2025 – Present, Auckland, NZ)</em>
+      </p>
+      <ul>
+        <li>Built and maintained ETL pipelines to clean, integrate, and document Amplitude &amp; MySQL data.</li>
+        <li>Developed partner-facing and internal reporting portals with automated reports, interactive dashboards, and alerting.</li>
+        <li>Performed user behavior, cohort, and A/B analyses to drive product enhancements and ingredient-trend insights.</li>
+        <li>Presented clear, data-driven recommendations to founders and cross-functional teams to inform strategic decisions.</li>
+      </ul>
 
-          <article class="project-card">
-            <h3>Medwell Pharmacy Patient Portal</h3>
-            <p>Advanced pharmacy portal—Medwell OS—that streamlines operations and enhances patient care with medication tracking, real-time interaction checks, and prescription-label printing.</p>
-            <p class="correlation">Built during my Bachelor of Computer Science at Swinburne University, collaborating in a team to improve healthcare technology.</p>
-            <button class="btn" id="view-demo-btn">View Demo</button>
-          </article>
+      <p>
+        <strong>Tutor (Part-time)</strong> – Enrich Academy <em>(Oct 2024 – Present, Auckland, NZ)</em>
+      </p>
+      <ul>
+        <li>Conduct personalized tutoring sessions in Mathematics, English, and Science.</li>
+        <li>Create customized lesson plans to meet unique learning needs.</li>
+        <li>Monitor and track academic progress, adapting strategies for continuous improvement.</li>
+      </ul>
 
-          <article class="project-card">
-            <h3>Mental Wellness Tracker App</h3>
-            <p>Culture-inclusive mental wellness tracker integrating Te Tiriti o Waitangi principles. Full-stack development with secure data handling and an intuitive UI.</p>
-            <p class="correlation">Completed as a group project for my MSE800 Professional Engineering course at Yoobee College.</p>
-            <a href="https://github.com/mebss/MSE-800-Professional-Engineering-Group-Project-/tree/main/mental_wellness_tracker" target="_blank" class="btn">View on GitHub</a>
-          </article>
+      <p>
+        <strong>Junior Technology Instructor (Casual)</strong> – SCRATCHPAD NZ <em>(Sep 2024 – Present, Auckland, NZ)</em>
+      </p>
+      <ul>
+        <li>Lead interactive sessions on programming fundamentals using Python, Scratch, and Arduino.</li>
+        <li>Foster creativity and problem-solving skills through project-based learning.</li>
+        <li>Provide regular progress updates and feedback to parents.</li>
+      </ul>
 
-          <article class="project-card">
-            <h3>Car Rental System (CLI)</h3>
-            <p>Python CLI app with OOP design, UML diagrams, modular architecture, and robust error handling for a seamless rental workflow.</p>
-            <p class="correlation">Developed as part of my Master’s Software Engineering coursework at Yoobee College.</p>
-            <a href="https://github.com/mebss/MSE800-Professional-Software-Engineering/tree/main/CarRentalSystem_Mehrab_Bhuiyan" target="_blank" class="btn">View on GitHub</a>
-          </article>
+      <p>
+        <strong>Assistant IT Support (Full-time)</strong> – Air Smart Technology SDN BHD <em>(Apr 2019 – Sep 2020, Penang, Malaysia)</em>
+      </p>
+      <ul>
+        <li>Oversaw inventory management system, ensuring accurate asset tracking.</li>
+        <li>Provided network troubleshooting and IT support to improve system reliability.</li>
+        <li>Contributed to process improvements for faster technical support response.</li>
+      </ul>
 
-          <article class="project-card">
-            <h3>Bus Tracking System</h3>
-            <p>PHP &amp; Dockerized full-stack app integrating live Auckland Transport data to auto-populate a map with real-time bus positions.</p>
-            <p class="correlation">Capstone-style project in my MSE804 Intelligent Transportation Systems module at Yoobee College.</p>
-            <a href="https://github.com/mebss/Bustrackingapp" target="_blank" class="btn">View on GitHub</a>
-          </article>
+      <p>
+        <strong>Junior Software Developer (Full-time)</strong> – Skylogistics Tours &amp; Travel SDN BHD <em>(Jan 2018 – Feb 2019, Penang, Malaysia)</em>
+      </p>
+      <ul>
+        <li>Enhanced booking and customer management software (TravelPoint, Galileo systems).</li>
+        <li>Addressed bugs, optimized system performance, and improved functionality.</li>
+      </ul>
 
-          <article class="project-card">
-            <h3>Fitness Tracker Data Modeling &amp; Responsible Data Report</h3>
-            <p>Statistical analysis (regression, clustering) on fitness app data to predict engagement, plus ethical guidelines on anonymization and informed consent.</p>
-            <p class="correlation">Produced for my MSE803 Data Analytics course, blending technical modeling with ethical best practices.</p>
-            <a href="https://github.com/mebss/MSE803_Data_Analytics/tree/main/Assessment%202" target="_blank" class="btn">View on GitHub</a>
-          </article>
+    </div>
+  </section>
 
-        </div>
-      </section>
+  <!-- PROJECTS PREVIEW SECTION -->
+  <section id="projects-preview">
+    <h2>Featured Projects</h2>
+    <p>Check out a selection of my professional and side projects.</p>
+    <a href="projects.html" class="btn">View All Projects →</a>
+  </section>
 
-      <!-- SCRATCHPAD PROJECTS -->
-      <section id="scratchpad">
-        <h2>Scratchpad Projects</h2>
-        <div class="projects-grid">
+  <!-- VOLUNTEERING SECTION -->
+  <section id="volunteering">
+    <h2>Volunteering</h2>
+    <div class="section-content">
+      <p>
+        <strong>Yoobee MSE-B Student Representative</strong> <em>(Jul 2024 – Present)</em>
+      </p>
+      <ul>
+        <li>Serve as liaison between students and faculty, addressing concerns and facilitating communication.</li>
+        <li>Coordinate events and activities, fostering a supportive environment for MSE students.</li>
+      </ul>
 
-          <article class="project-card">
-            <h3>Turtle Snake Game</h3>
-            <p>Classic Snake in Python using Turtle—arrow-key movement, dynamic food spawning, score tracking, and speed ramp-up.</p>
-            <p class="correlation">Used as a hands-on demo in my Junior Technology Instructor role at Scratchpad NZ to teach event-driven programming with Turtle graphics.</p>
-            <a href="https://github.com/mebss/Turtle-Snake-Game" target="_blank" class="btn">View on GitHub</a>
-          </article>
+      <p>
+        <strong>Te Reo Language Day | Yoobee Colleges</strong> <em>(Sep 12, 2024)</em>
+      </p>
+      <ul>
+        <li>Assisted at the booth serving coffee and helped with event preparations.</li>
+        <li>Engaged with attendees, providing information and promoting Te Reo Māori language and culture.</li>
+      </ul>
 
-          <article class="project-card">
-            <h3>Number Guessing Game</h3>
-            <p>Terminal-based Python game: guess the sum of two dice with random animations and win/lose feedback.</p>
-            <p class="correlation">Created as an interactive exercise at Scratchpad NZ to demonstrate randomness, loops, and user input handling.</p>
-            <a href="https://github.com/mebss/Number-Guessing-Game" target="_blank" class="btn">View on GitHub</a>
-          </article>
+      <p>
+        <strong>Spring Sizzle Event | Yoobee Colleges</strong> <em>(Oct 11, 2024)</em>
+      </p>
+      <ul>
+        <li>Collaborated with peers and tutors to plan and manage the event for students and staff.</li>
+        <li>Served both regular and vegetarian sausages, ensuring a welcoming and inclusive atmosphere.</li>
+      </ul>
+    </div>
+  </section>
 
-          <article class="project-card">
-            <h3>Library Management CLI</h3>
-            <p>Python console application for admins &amp; members to manage books, registration, borrowing, and overdue reports, backed by CSV files.</p>
-            <p class="correlation">Built for Scratchpad NZ workshops to illustrate file I/O and command-line interface design.</p>
-            <a href="https://github.com/mebss/Library-Management-CLI-" target="_blank" class="btn">View on GitHub</a>
-          </article>
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="section-content">
+      <p><strong>Email:</strong> <a href="mailto:mehrabhuiyan@gmail.com">mehrabhuiyan@gmail.com</a></p>
+      <p><strong>Phone:</strong> 027-499-5368</p>
+      <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank">linkedin.com/in/mehrab-bhuiyan</a>
+      </p>
+      <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/mebss" target="_blank">github.com/mebss</a>
+      </p>
+    </div>
+  </section>
 
-        </div>
-      </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-      <p>&copy; 2025 Mehrab Bhuiyan. All rights reserved.</p>
-    </footer>
-
-  </div> <!-- end #page-content -->
-
-  <!-- MODAL SCRIPT -->
-  <script>
-    const btn   = document.getElementById('view-demo-btn');
-    const modal = document.getElementById('video-modal');
-    const close = modal.querySelector('.close');
-    const page  = document.getElementById('page-content');
-
-    btn.addEventListener('click', () => {
-      modal.style.display = 'flex';
-      page.classList.add('blurred-content');
-    });
-
-    function stopDemo() {
-      modal.style.display = 'none';
-      page.classList.remove('blurred-content');
-      modal.querySelector('video').pause();
-    }
-
-    close.addEventListener('click', stopDemo);
-    modal.addEventListener('click', e => {
-      if (e.target === modal) stopDemo();
-    });
-  </script>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Mehrab Bhuiyan. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
