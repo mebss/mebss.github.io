@@ -9,6 +9,15 @@
   box-sizing: border-box;
 }
 
+/* ─── Hide header on scroll ─── */
+header {
+  transition: transform 0.3s ease-in-out;
+}
+
+header.hide {
+  transform: translateY(-100%);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;

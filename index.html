@@ -193,6 +193,21 @@
   <footer>
     <p>&copy; 2025 Mehrab Bhuiyan. All rights reserved.</p>
   </footer>
-
+ <!-- Hide header on scroll -->
+ <script>
+  (function() {
+    const header = document.querySelector('header');
+    let lastY = window.pageYOffset;
+    window.addEventListener('scroll', () => {
+      const currentY = window.pageYOffset;
+      if (currentY > lastY) {
+        header.classList.add('hide');
+      } else {
+        header.classList.remove('hide');
+      }
+      lastY = currentY <= 0 ? 0 : currentY;
+    });
+  })();
+</script>
 </body>
 </html>
