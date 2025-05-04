@@ -260,32 +260,33 @@ footer {
   }
 }
 
-/* Modal overlay: full-screen, semi-dark + backdrop blur */
-.modal {
-  position: fixed;
-  inset: 0; /* top:0; right:0; bottom:0; left:0; */
-  display: none;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999 !important;
+/* Modal content: fixed max‐width, max‐height, clip overflow */
+.modal-content {
+  position: relative;
+  background: #000;
+  border-radius: 8px;
+  width: 80vw;           /* 80% of viewport width */
+  max-width: 800px;      /* never wider than 800px */
+  max-height: 80vh;      /* never taller than 80% of viewport height */
+  overflow: hidden;      /* hide any overflow */
 }
+
+
 
 /* Fallback if backdrop-filter unsupported */
 .blurred-content {
   filter: blur(5px);
 }
 
-/* Modal content: constrain to viewport, hide overflow */
-.modal-content {
-  position: relative;
-  background: #000;
-  border-radius: 8px;
-  max-width: 90vw;
-  max-height: 80vh;
-  overflow: hidden;
+
+/* Video scales down to fit the container */
+.modal-content video {
+  display: block;
+  width: 100%;           /* fill the modal’s width */
+  height: auto;          /* preserve aspect ratio */
+  max-height: 100%;      /* but never overflow vertically */
+  object-fit: contain;   /* always fully visible */
+  border-radius: 8px 8px 0 0;
 }
 
 /* Video scales to fill modal height */
