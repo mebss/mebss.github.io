@@ -1,297 +1,209 @@
-/* ─────────────────────────────────────────────────────────────────────────────
-   Custom Properties (CSS Variables)
-───────────────────────────────────────────────────────────────────────────── */
-:root {
-  /* Colors */
-  --clr-primary: #333;
-  --clr-secondary: #ffcc00;
-  --clr-bg-light: #fff;
-  --clr-bg-dark: #000;
-  --clr-text: #333;
-  --clr-text-on-dark: #fff;
-  --clr-overlay: rgba(51, 51, 51, 0.95);
-
-  /* Typography */
-  --fs-base: 1rem;
-  --fs-h1: 2.5rem;
-  --fs-h2: 2rem;
-  --fs-h3: 1.5rem;
-  --ff-heading: 'Montserrat', sans-serif;
-  --ff-body: 'Roboto', sans-serif;
-
-  /* Spacing */
-  --spacer: 1.5rem;
-  --radius: 0.5rem;
-
-  /* Transitions */
-  --transition-fast: 0.2s ease;
-  --transition-medium: 0.3s ease-in-out;
-
-  /* Gradients */
-  --bg-gradient: linear-gradient(135deg, #e0eafc, #cfdef3);
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   Import Fonts
-───────────────────────────────────────────────────────────────────────────── */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   Global Reset & Base Styles
-───────────────────────────────────────────────────────────────────────────── */
+/* Global Styles & Background */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--ff-body);
-  font-size: var(--fs-base);
-  line-height: 1.6;
-  color: var(--clr-text);
-  background: var(--bg-gradient);
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   Skip Link (for keyboard users)
-───────────────────────────────────────────────────────────────────────────── */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--clr-primary);
-  color: var(--clr-text-on-dark);
-  padding: 0.5rem 1rem;
-  z-index: 2000;
-  text-decoration: none;
-  transition: top var(--transition-fast);
-}
-.skip-link:focus {
-  top: 0;
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   Layout Containers
-───────────────────────────────────────────────────────────────────────────── */
-header, nav, main, section, footer {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: var(--spacer) 0;
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   Header & Navigation
-───────────────────────────────────────────────────────────────────────────── */
+/* ─── Hide header on scroll ─── */a
 header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--clr-primary);
-  color: var(--clr-text-on-dark);
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  transition: transform var(--transition-medium);
+  transition: transform 0.3s ease-in-out;
 }
 
 header.hide {
   transform: translateY(-100%);
 }
 
-header h1 {
-  margin-bottom: 0.5rem;
-  font-family: var(--ff-heading);
-  font-size: var(--fs-h1);
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  color: #333;
 }
 
-/* Desktop nav */
+/* Layout for header, nav, section, and footer */
+header, nav, section, footer {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+/* Sticky Header with Gradient & Shadow */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  text-align: center;
+  background: linear-gradient(90deg, #333, #555);
+  color: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: var(--spacer);
+  gap: 1rem;
   margin-top: 0.5rem;
 }
 
-nav a {
-  color: var(--clr-text-on-dark);
+nav ul li a {
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  transition: color var(--transition-fast);
+  transition: color 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
-  color: var(--clr-secondary);
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffcc00;
 }
 
-/* Hamburger toggle (hidden by default) */
-#nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem;
-  cursor: pointer;
-  z-index: 1100;
-}
-
-/* Hamburger icon lines */
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 3px;
-  background: var(--clr-text-on-dark);
-  border-radius: 2px;
-  position: relative;
-  transition: transform var(--transition-fast);
-}
-.hamburger::before {
-  top: -8px;
-  position: absolute;
-}
-.hamburger::after {
-  top: 8px;
-  position: absolute;
-}
-
-/* Toggle open => animate to X */
-#nav-toggle.open .hamburger {
-  background: transparent;
-}
-#nav-toggle.open .hamburger::before {
-  transform: translateY(8px) rotate(45deg);
-}
-#nav-toggle.open .hamburger::after {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Mobile nav (hidden by default) */
-@media (max-width: 768px) {
-  #nav-toggle {
-    display: block;
-  }
-
-  /* Slide-in menu */
-  #main-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100vh;
-    overflow: hidden;
-    background: var(--clr-overlay);
-    backdrop-filter: blur(4px);
-    transition: width var(--transition-medium);
-    z-index: 1000;
-  }
-  #main-nav.open {
-    width: 75%;
-  }
-
-  #main-nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 4rem 2rem;
-    gap: var(--spacer);
-  }
-  #main-nav li + li {
-    margin-top: var(--spacer);
-  }
-  #main-nav a {
-    font-size: 1.25rem;
-  }
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   Section Styling & Hover Effects
-───────────────────────────────────────────────────────────────────────────── */
+/* Section Styling with Hover Animation */
 section {
-  background: var(--clr-bg-light);
-  padding: var(--spacer);
-  margin-bottom: var(--spacer);
-  border-radius: var(--radius);
+  background-color: #fff;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 section:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 section h2 {
-  font-family: var(--ff-heading);
-  font-size: var(--fs-h2);
-  margin-bottom: var(--spacer);
-  border-bottom: 3px solid var(--clr-primary);
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #333;
   display: inline-block;
   padding-bottom: 0.25rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* About section grid */
-.about-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: var(--spacer);
-  align-items: center;
-}
-@media (max-width: 768px) {
-  .about-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .about-container img {
-    margin: 0 auto;
-  }
-}
-
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-.about-container img {
-  border-radius: 50%;
-  border: 4px solid var(--clr-bg-light);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-/* Content lists */
-.section-content ul {
-  list-style-type: disc;
-  margin-left: 2rem;
+/* About Section */
+#about h2 {
+  text-align: center;
   margin-bottom: 1rem;
 }
 
-/* Buttons */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: left;
+  margin: 0 auto;
+}
+
+#about img {
+  max-width: 300px;
+  width: 200%;
+  border-radius: 50%;
+  margin-bottom: 0;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Section Content */
+.section-content {
+  margin-top: 1rem;
+}
+
+.section-content p,
+.section-content ul {
+  margin-bottom: 1rem;
+}
+
+.section-content ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+/* Fade-in for index project items */
+.project-item {
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-item h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.project-item p {
+  margin-bottom: 0.5rem;
+}
+
+.project-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project-item img:hover {
+  transform: scale(1.05);
+}
+
+.project-item video {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+/* Button */
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: var(--clr-primary);
-  color: var(--clr-text-on-dark);
-  border-radius: var(--radius);
+  background: #333;
+  color: #fff;
+  border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-  transition: background var(--transition-fast), transform var(--transition-fast);
-}
-.btn:hover {
-  background: darken(var(--clr-primary), 10%);
-  transform: translateY(-2px);
+  transition: background 0.3s ease;
 }
 
-/* Projects grid */
+.btn:hover {
+  background: #555;
+}
+
+/* Projects Page Grid & Cards */
+main {
+  width: 90%;
+  max-width: 1100px;
+  margin: 2rem auto;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -299,95 +211,161 @@ img {
 }
 
 .project-card {
-  padding: var(--spacer);
-  border-radius: var(--radius);
-  background: var(--clr-bg-light);
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
+
 .project-card h3 {
-  font-family: var(--ff-heading);
-  font-size: var(--fs-h3);
   margin-bottom: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
 }
+
+.project-card p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
 .project-card .correlation {
   font-style: italic;
   color: #555;
   margin-bottom: 1rem;
 }
 
-/* Fade-in animation for project items */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.project-item {
-  animation: fadeInUp 0.6s forwards;
-}
-
-/* Footer */
+/* Footer Styling */
 footer {
   text-align: center;
-  background: var(--clr-primary);
-  color: var(--clr-text-on-dark);
-  padding: var(--spacer) 0;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
   font-size: 0.9rem;
 }
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   Video Modal
-───────────────────────────────────────────────────────────────────────────── */
+/* Responsive Nav for Mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* ─── VIDEO MODAL OVERLAY & CENTERED BOX ─── */
+
 .modal {
   position: fixed;
-  inset: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0,0,0,0.7);
+  inset: 0;                          /* full viewport */
+  display: none;                     /* shown by JS as flex */
+  background: rgba(0, 0, 0, 0.7);    /* dark overlay */
   backdrop-filter: blur(8px);
-  z-index: 2000;
+  -webkit-backdrop-filter: blur(8px);
+  justify-content: center;           /* horizontal centering */
+  align-items: center;               /* vertical centering */
+  z-index: 9999 !important;
 }
+
+/* If backdrop-filter isn’t supported */
 .blurred-content {
   filter: blur(8px);
 }
+
+/* The centered “window” */
 .modal-content {
   position: relative;
-  background: var(--clr-bg-dark);
-  border-radius: var(--radius);
-  width: 80vw;
-  max-width: 800px;
-  max-height: 80vh;
-  overflow: hidden;
+  background: #000;
+  border-radius: 8px;
+  width: 80vw;                       /* 80% of viewport width */
+  max-width: 800px;                  /* never wider than 800px */
+  max-height: 80vh;                  /* never taller than 80% of viewport height */
+  overflow: hidden;                  /* clip any overflow */
 }
+
+/* Make the video fill that box, preserving aspect ratio */
 .modal-content video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  display: block;
+  width: 100%;                       /* fill modal width */
+  height: 100%;                      /* fill modal height */
+  object-fit: contain;               /* letterbox if needed */
+  border-radius: 8px 8px 0 0;
 }
+
+/* Close button styling */
 .modal .close {
   position: absolute;
   top: 0.5rem;
   right: 0.75rem;
   font-size: 2rem;
-  color: var(--clr-text-on-dark);
-  background: none;
-  border: none;
+  color: #fff;
   cursor: pointer;
 }
 
-/* Utility: darken fallback polyfill for btn:hover */
-@supports not (color: color(display-p3 1 1 1)) {
-  .btn:hover {
-    background: #222;
+/* hide the toggle by default on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* MOBILE BREAKPOINT */
+@media (max-width: 768px) {
+  /* show the toggle */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    z-index: 1100;
+  }
+
+  /* hide nav by default */
+  nav {
+    display: none;
+  }
+
+  /* when nav is “open” we’ll add an .open class */
+  nav.open {
+    display: block;
+    background: linear-gradient(90deg, #333, #555);
+    padding: 1rem 0;
+  }
+
+  /* stack links and tighten spacing */
+  nav ul {
+    flex-direction: column;
+    gap: 0;               /* we’ll control padding per link */
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* optional: highlight the first link’s top border */
+  nav ul li:first-child a {
+    border-top: none;
   }
 }
