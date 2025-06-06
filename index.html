@@ -3,15 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Mehrab Bhuiyan – Software Engineer portfolio featuring full-stack projects, data analytics, and teaching experience.">
   <title>Mehrab Bhuiyan - Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- Skip link for keyboard users -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
   <!-- HEADER & NAVIGATION -->
   <header>
     <h1>Mehrab Bhuiyan</h1>
-    <nav>
+
+    <!-- Hamburger toggle -->
+    <button id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav id="main-nav" aria-label="Main navigation">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
@@ -24,190 +34,205 @@
     </nav>
   </header>
 
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <img src="images/profile.jpg" alt="Profile Picture of Mehrab Bhuiyan">
-      <div class="section-content">
-        <p>
-          Hello! I'm <strong>Mehrab Bhuiyan</strong>, a passionate software engineer specializing in full stack development, IT support, and technology instruction. I'm driven by a love for solving complex problems and creating innovative solutions that seamlessly integrate technology with user-centric design.
-        </p>
-        <p>
-          Currently pursuing a Master's in Software Engineering, I aim to develop projects that not only push technological boundaries but also make a real-world impact. I'm always eager to learn new tools and embrace challenges that foster both professional growth and creative innovation.
-        </p>
-        <p>
-          Whether it's building cutting-edge applications or mentoring aspiring developers, I believe in continuous learning and delivering excellence in every project.
-        </p>
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <img src="images/profile.jpg" alt="Profile Picture of Mehrab Bhuiyan">
+        <div class="section-content">
+          <p>
+            Hello! I'm <strong>Mehrab Bhuiyan</strong>, a passionate software engineer specializing in full stack development, IT support, and technology instruction. I'm driven by a love for solving complex problems and creating innovative solutions that seamlessly integrate technology with user-centric design.
+          </p>
+          <p>
+            Currently pursuing a Master's in Software Engineering, I aim to develop projects that not only push technological boundaries but also make a real-world impact. I'm always eager to learn new tools and embrace challenges that foster both professional growth and creative innovation.
+          </p>
+          <p>
+            Whether it's building cutting-edge applications or mentoring aspiring developers, I believe in continuous learning and delivering excellence in every project.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EDUCATION SECTION -->
-  <section id="education">
-    <h2>Education</h2>
-    <div class="section-content">
-      <ul>
-        <li>
-          <strong>Master’s Degree, Software Engineering</strong><br>
-          Yoobee College of Creative Innovation, Auckland, New Zealand<br>
-          <em>(Jul 2024 – Present)</em>
-        </li>
-        <li>
-          <strong>Bachelor of Computer Science</strong><br>
-          Swinburne University of Technology, Sarawak, Malaysia<br>
-          <em>(Mar 2021 – Dec 2023)</em>
-        </li>
-        <li>
-          <strong>Diploma of Education, Computer Engineering</strong><br>
-          Penang Skills Development Centre, Penang, Malaysia<br>
-          <em>(Feb 2018 – Sep 2020)</em>
-        </li>
-      </ul>
-    </div>
-  </section>
+    <!-- EDUCATION SECTION -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="section-content">
+        <ul>
+          <li>
+            <strong>Master’s Degree, Software Engineering</strong><br>
+            Yoobee College of Creative Innovation, Auckland, New Zealand<br>
+            <em>(Jul 2024 – Present)</em>
+          </li>
+          <li>
+            <strong>Bachelor of Computer Science</strong><br>
+            Swinburne University of Technology, Sarawak, Malaysia<br>
+            <em>(Mar 2021 – Dec 2023)</em>
+          </li>
+          <li>
+            <strong>Diploma of Education, Computer Engineering</strong><br>
+            Penang Skills Development Centre, Penang, Malaysia<br>
+            <em>(Feb 2018 – Sep 2020)</em>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-  <!-- SKILLS SECTION -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="section-content">
-      <ul>
-        <li><strong>Programming Languages:</strong> Python, C/C++, Java, Arduino, PHP, JavaScript, HTML/HTML5, CSS, Kotlin, C#, Rust</li>
-        <li><strong>Software Tools & Frameworks:</strong> MySQL, Laravel, Vue.js, AWS, Docker, Git</li>
-        <li><strong>Technical Skills:</strong> Full Stack Development, Network Troubleshooting, IT Infrastructure Management, Computing, Software Development</li>
-        <li><strong>Project Management & Planning:</strong> Agile Methodologies, Jira, Trello</li>
-        <li><strong>Soft Skills:</strong> Communication, Public Speaking, Time Management, Adaptability, Problem Solving, Leadership, Teamwork</li>
-        <li><strong>Teaching Skills:</strong> Curriculum Development, Workshop Facilitation, Classroom Management</li>
-      </ul>
-    </div>
-  </section>
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="section-content">
+        <ul>
+          <li><strong>Programming Languages:</strong> Python, C/C++, Java, Arduino, PHP, JavaScript, HTML5, CSS, Kotlin, C#, Rust</li>
+          <li><strong>Software Tools & Frameworks:</strong> MySQL, Laravel, Vue.js, AWS, Docker, Git</li>
+          <li><strong>Technical Skills:</strong> Full Stack Development, Network Troubleshooting, IT Infrastructure Management</li>
+          <li><strong>Project Management:</strong> Agile Methodologies, Jira, Trello</li>
+          <li><strong>Soft Skills:</strong> Communication, Public Speaking, Time Management, Adaptability, Problem Solving, Leadership, Teamwork</li>
+          <li><strong>Teaching Skills:</strong> Curriculum Development, Workshop Facilitation, Classroom Management</li>
+        </ul>
+      </div>
+    </section>
 
-  <!-- EXPERIENCE SECTION -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="section-content">
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="section-content">
 
-      <p>
-        <strong>Data Analyst Intern</strong> – Favour <em>(Apr 2025 – Present, Auckland, NZ)</em>
-      </p>
-      <ul>
-        <li>Built and maintained ETL pipelines to clean, integrate, and document Amplitude &amp; MySQL data.</li>
-        <li>Developed partner-facing and internal reporting portals with automated reports, interactive dashboards, and alerting.</li>
-        <li>Performed user behavior, cohort, and A/B analyses to drive product enhancements and ingredient-trend insights.</li>
-        <li>Presented clear, data-driven recommendations to founders and cross-functional teams to inform strategic decisions.</li>
-      </ul>
+        <article>
+          <h3>Data Analyst Intern – Favour</h3>
+          <p><em>Apr 2025 – Present, Auckland, NZ</em></p>
+          <ul>
+            <li>Built and maintained ETL pipelines to clean, integrate, and document Amplitude & MySQL data.</li>
+            <li>Developed partner-facing and internal reporting portals with automated reports, interactive dashboards, and alerting.</li>
+            <li>Performed user behavior, cohort, and A/B analyses to drive product enhancements and ingredient-trend insights.</li>
+            <li>Presented data-driven recommendations to founders and cross-functional teams.</li>
+          </ul>
+        </article>
 
-      <p>
-        <strong>Tutor (Part-time)</strong> – Enrich Academy <em>(Oct 2024 – Present, Auckland, NZ)</em>
-      </p>
-      <ul>
-        <li>Conduct personalized tutoring sessions in Mathematics, English, and Science.</li>
-        <li>Create customized lesson plans to meet unique learning needs.</li>
-        <li>Monitor and track academic progress, adapting strategies for continuous improvement.</li>
-      </ul>
+        <article>
+          <h3>Tutor (Part-time) – Enrich Academy</h3>
+          <p><em>Oct 2024 – Present, Auckland, NZ</em></p>
+          <ul>
+            <li>Conduct personalized tutoring sessions in Mathematics, English, and Science.</li>
+            <li>Create customized lesson plans to meet unique learning needs.</li>
+            <li>Monitor and track academic progress, adapting strategies for continuous improvement.</li>
+          </ul>
+        </article>
 
-      <p>
-        <strong>Junior Technology Instructor (Casual)</strong> – SCRATCHPAD NZ <em>(Sep 2024 – Present, Auckland, NZ)</em>
-      </p>
-      <ul>
-        <li>Lead interactive sessions on programming fundamentals using Python, Scratch, and Arduino.</li>
-        <li>Foster creativity and problem-solving skills through project-based learning.</li>
-        <li>Provide regular progress updates and feedback to parents.</li>
-      </ul>
+        <article>
+          <h3>Junior Technology Instructor – SCRATCHPAD NZ</h3>
+          <p><em>Sep 2024 – Present, Auckland, NZ</em></p>
+          <ul>
+            <li>Led interactive sessions on programming fundamentals using Python, Scratch, and Arduino.</li>
+            <li>Fostered creativity and problem-solving through project-based learning.</li>
+            <li>Provided regular progress updates and feedback to parents.</li>
+          </ul>
+        </article>
 
-      <p>
-        <strong>Assistant IT Support (Full-time)</strong> – Air Smart Technology SDN BHD <em>(Apr 2019 – Sep 2020, Penang, Malaysia)</em>
-      </p>
-      <ul>
-        <li>Oversaw inventory management system, ensuring accurate asset tracking.</li>
-        <li>Provided network troubleshooting and IT support to improve system reliability.</li>
-        <li>Contributed to process improvements for faster technical support response.</li>
-      </ul>
+        <article>
+          <h3>Assistant IT Support – Air Smart Technology SDN BHD</h3>
+          <p><em>Apr 2019 – Sep 2020, Penang, Malaysia</em></p>
+          <ul>
+            <li>Oversaw inventory management system, ensuring accurate asset tracking.</li>
+            <li>Provided network troubleshooting and IT support.</li>
+            <li>Contributed to process improvements for faster support response.</li>
+          </ul>
+        </article>
 
-      <p>
-        <strong>Junior Software Developer (Full-time)</strong> – Skylogistics Tours &amp; Travel SDN BHD <em>(Jan 2018 – Feb 2019, Penang, Malaysia)</em>
-      </p>
-      <ul>
-        <li>Enhanced booking and customer management software (TravelPoint, Galileo systems).</li>
-        <li>Addressed bugs, optimized system performance, and improved functionality.</li>
-      </ul>
+        <article>
+          <h3>Junior Software Developer – Skylogistics Tours & Travel SDN BHD</h3>
+          <p><em>Jan 2018 – Feb 2019, Penang, Malaysia</em></p>
+          <ul>
+            <li>Enhanced booking and customer management software (TravelPoint, Galileo).</li>
+            <li>Addressed bugs, optimized performance, and improved functionality.</li>
+          </ul>
+        </article>
 
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- PROJECTS PREVIEW SECTION -->
-  <section id="projects-preview">
-    <h2>Featured Projects</h2>
-    <p>Check out a selection of my professional and side projects.</p>
-    <a href="projects.html" class="btn">View All Projects →</a>
-  </section>
+    <!-- PROJECTS PREVIEW SECTION -->
+    <section id="projects-preview">
+      <h2>Featured Projects</h2>
+      <p>Check out a selection of my professional and side projects.</p>
+      <a href="projects.html" class="btn">View All Projects →</a>
+    </section>
 
-  <!-- VOLUNTEERING SECTION -->
-  <section id="volunteering">
-    <h2>Volunteering</h2>
-    <div class="section-content">
-      <p>
-        <strong>Yoobee MSE-B Student Representative</strong> <em>(Jul 2024 – Present)</em>
-      </p>
-      <ul>
-        <li>Serve as liaison between students and faculty, addressing concerns and facilitating communication.</li>
-        <li>Coordinate events and activities, fostering a supportive environment for MSE students.</li>
-      </ul>
+    <!-- VOLUNTEERING SECTION -->
+    <section id="volunteering">
+      <h2>Volunteering</h2>
+      <div class="section-content">
 
-      <p>
-        <strong>Te Reo Language Day | Yoobee Colleges</strong> <em>(Sep 12, 2024)</em>
-      </p>
-      <ul>
-        <li>Assisted at the booth serving coffee and helped with event preparations.</li>
-        <li>Engaged with attendees, providing information and promoting Te Reo Māori language and culture.</li>
-      </ul>
+        <article>
+          <h3>Yoobee MSE-B Student Representative</h3>
+          <p><em>Jul 2024 – Present</em></p>
+          <ul>
+            <li>Serve as liaison between students and faculty.</li>
+            <li>Coordinate events and activities for MSE students.</li>
+          </ul>
+        </article>
 
-      <p>
-        <strong>Spring Sizzle Event | Yoobee Colleges</strong> <em>(Oct 11, 2024)</em>
-      </p>
-      <ul>
-        <li>Collaborated with peers and tutors to plan and manage the event for students and staff.</li>
-        <li>Served both regular and vegetarian sausages, ensuring a welcoming and inclusive atmosphere.</li>
-      </ul>
-    </div>
-  </section>
+        <article>
+          <h3>Te Reo Language Day | Yoobee Colleges</h3>
+          <p><em>Sep 12, 2024</em></p>
+          <ul>
+            <li>Assisted at the booth and prepared event materials.</li>
+            <li>Promoted Te Reo Māori language and culture.</li>
+          </ul>
+        </article>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="section-content">
-      <p><strong>Email:</strong> <a href="mailto:hi@mebss.xyz">hi@mebss.xyz</a></p>
-      <p><strong>Phone:</strong> 027-499-5368</p>
-      <p>
-        <strong>LinkedIn:</strong>
-        <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank">linkedin.com/in/mehrab-bhuiyan</a>
-      </p>
-      <p>
-        <strong>GitHub:</strong>
-        <a href="https://github.com/mebss" target="_blank">github.com/mebss</a>
-      </p>
-    </div>
-  </section>
+        <article>
+          <h3>Spring Sizzle Event | Yoobee Colleges</h3>
+          <p><em>Oct 11, 2024</em></p>
+          <ul>
+            <li>Planned and managed the event.</li>
+            <li>Served both regular and vegetarian sausages.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="section-content">
+        <p><strong>Email:</strong> <a href="mailto:hi@mebss.xyz">hi@mebss.xyz</a></p>
+        <p><strong>Phone:</strong> 027-499-5368</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank">linkedin.com/in/mehrab-bhuiyan</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/mebss" target="_blank">github.com/mebss</a></p>
+      </div>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Mehrab Bhuiyan. All rights reserved.</p>
   </footer>
- <!-- Hide header on scroll -->
- <script>
-  (function() {
-    const header = document.querySelector('header');
-    let lastY = window.pageYOffset;
-    window.addEventListener('scroll', () => {
-      const currentY = window.pageYOffset;
-      if (currentY > lastY) {
-        header.classList.add('hide');
-      } else {
-        header.classList.remove('hide');
-      }
-      lastY = currentY <= 0 ? 0 : currentY;
+
+  <!-- NAV TOGGLE SCRIPT -->
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const nav    = document.getElementById('main-nav');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.classList.toggle('open');
+      nav.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
     });
-  })();
-</script>
+
+    // Optional: close on link click
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
 </body>
 </html>

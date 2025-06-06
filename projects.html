@@ -3,134 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Mehrab Bhuiyan – Projects portfolio showcasing coursework, professional, and Scratchpad projects.">
   <title>Mehrab Bhuiyan – Projects</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- VIDEO MODAL -->
-  <div id="video-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <video controls>
-        <source src="videos/medwell-demo.mkv" type="video/mp4">
-        Your browser doesn’t support HTML5 video.
-      </video>
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <h1>Mehrab Bhuiyan</h1>
+
+    <!-- Hamburger toggle -->
+    <button id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav id="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- VIDEO MODAL -->
+    <div id="video-modal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <button class="close" aria-label="Close video">&times;</button>
+        <video controls preload="none" muted>
+          <source src="videos/medwell-demo.mkv" type="video/mp4">
+          Your browser doesn’t support HTML5 video.
+        </video>
+      </div>
     </div>
-  </div>
 
-  <!-- PAGE CONTENT -->
-  <div id="page-content">
+    <!-- COURSEWORK & PROFESSIONAL PROJECTS -->
+    <section id="coursework">
+      <h2>Coursework &amp; Professional Projects</h2>
+      <div class="projects-grid">
 
-    <!-- HEADER & NAVIGATION -->
-    <header>
-      <h1>Mehrab Bhuiyan</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html" class="active">Projects</a></li>
-        </ul>
-      </nav>
-    </header>
+        <article class="project-card">
+          <h3>Medwell Pharmacy Patient Portal</h3>
+          <p>Advanced pharmacy portal—Medwell OS—that streamlines operations and enhances patient care with medication tracking, real-time interaction checks, and prescription-label printing.</p>
+          <p class="correlation">Built during my Bachelor of Computer Science at Swinburne University, collaborating in a team to improve healthcare technology.</p>
+          <button class="btn" id="view-demo-btn">View Demo</button>
+        </article>
 
-    <!-- MAIN CONTENT -->
-    <main>
+        <article class="project-card">
+          <h3>Mental Wellness Tracker App</h3>
+          <p>Culture-inclusive mental wellness tracker integrating Te Tiriti o Waitangi principles. Full-stack development with secure data handling and an intuitive UI.</p>
+          <p class="correlation">Completed as a group project for my MSE800 Professional Engineering course at Yoobee College.</p>
+          <a href="https://github.com/mebss/MSE-800-Professional-Engineering-Group-Project-/tree/main/mental_wellness_tracker" target="_blank" class="btn">View on GitHub</a>
+        </article>
 
-      <!-- COURSEWORK & PROFESSIONAL PROJECTS -->
-      <section id="coursework">
-        <h2>Coursework &amp; Professional Projects</h2>
-        <div class="projects-grid">
+        <article class="project-card">
+          <h3>Car Rental System (CLI)</h3>
+          <p>Python CLI app with OOP design, UML diagrams, modular architecture, and robust error handling for a seamless rental workflow.</p>
+          <p class="correlation">Developed as part of my Master’s Software Engineering coursework at Yoobee College.</p>
+          <a href="https://github.com/mebss/MSE800-Professional-Software-Engineering/tree/main/CarRentalSystem_Mehrab_Bhuiyan" target="_blank" class="btn">View on GitHub</a>
+        </article>
 
-          <article class="project-card">
-            <h3>Medwell Pharmacy Patient Portal</h3>
-            <p>Advanced pharmacy portal—Medwell OS—that streamlines operations and enhances patient care with medication tracking, real-time interaction checks, and prescription-label printing.</p>
-            <p class="correlation">Built during my Bachelor of Computer Science at Swinburne University, collaborating in a team to improve healthcare technology.</p>
-            <button class="btn" id="view-demo-btn">View Demo</button>
-          </article>
+        <article class="project-card">
+          <h3>Bus Tracking System</h3>
+          <p>PHP &amp; Dockerized full-stack app integrating live Auckland Transport data to auto-populate a map with real-time bus positions.</p>
+          <p class="correlation">Capstone-style project in my MSE804 Intelligent Transportation Systems module at Yoobee College.</p>
+          <a href="https://github.com/mebss/Bustrackingapp" target="_blank" class="btn">View on GitHub</a>
+        </article>
 
-          <article class="project-card">
-            <h3>Mental Wellness Tracker App</h3>
-            <p>Culture-inclusive mental wellness tracker integrating Te Tiriti o Waitangi principles. Full-stack development with secure data handling and an intuitive UI.</p>
-            <p class="correlation">Completed as a group project for my MSE800 Professional Engineering course at Yoobee College.</p>
-            <a href="https://github.com/mebss/MSE-800-Professional-Engineering-Group-Project-/tree/main/mental_wellness_tracker" target="_blank" class="btn">View on GitHub</a>
-          </article>
+        <article class="project-card">
+          <h3>Fitness Tracker Data Modeling &amp; Report</h3>
+          <p>Statistical analysis (regression, clustering) on fitness app data to predict engagement, plus ethical guidelines on anonymization and informed consent.</p>
+          <p class="correlation">Produced for my MSE803 Data Analytics course, blending technical modeling with ethical best practices.</p>
+          <a href="https://github.com/mebss/MSE803_Data_Analytics/tree/main/Assessment%202" target="_blank" class="btn">View on GitHub</a>
+        </article>
 
-          <article class="project-card">
-            <h3>Car Rental System (CLI)</h3>
-            <p>Python CLI app with OOP design, UML diagrams, modular architecture, and robust error handling for a seamless rental workflow.</p>
-            <p class="correlation">Developed as part of my Master’s Software Engineering coursework at Yoobee College.</p>
-            <a href="https://github.com/mebss/MSE800-Professional-Software-Engineering/tree/main/CarRentalSystem_Mehrab_Bhuiyan" target="_blank" class="btn">View on GitHub</a>
-          </article>
+      </div>
+    </section>
 
-          <article class="project-card">
-            <h3>Bus Tracking System</h3>
-            <p>PHP &amp; Dockerized full-stack app integrating live Auckland Transport data to auto-populate a map with real-time bus positions.</p>
-            <p class="correlation">Capstone-style project in my MSE804 Intelligent Transportation Systems module at Yoobee College.</p>
-            <a href="https://github.com/mebss/Bustrackingapp" target="_blank" class="btn">View on GitHub</a>
-          </article>
+    <!-- SCRATCHPAD PROJECTS -->
+    <section id="scratchpad">
+      <h2>Scratchpad Projects</h2>
+      <div class="projects-grid">
 
-          <article class="project-card">
-            <h3>Fitness Tracker Data Modeling &amp; Responsible Data Report</h3>
-            <p>Statistical analysis (regression, clustering) on fitness app data to predict engagement, plus ethical guidelines on anonymization and informed consent.</p>
-            <p class="correlation">Produced for my MSE803 Data Analytics course, blending technical modeling with ethical best practices.</p>
-            <a href="https://github.com/mebss/MSE803_Data_Analytics/tree/main/Assessment%202" target="_blank" class="btn">View on GitHub</a>
-          </article>
+        <article class="project-card">
+          <h3>Turtle Snake Game</h3>
+          <p>Classic Snake in Python using Turtle—arrow-key movement, dynamic food spawning, score tracking, and speed ramp-up.</p>
+          <p class="correlation">Used as a demo in my Junior Technology Instructor role at Scratchpad NZ to teach event-driven programming.</p>
+          <a href="https://github.com/mebss/Turtle-Snake-Game" target="_blank" class="btn">View on GitHub</a>
+        </article>
 
-        </div>
-      </section>
+        <article class="project-card">
+          <h3>Number Guessing Game</h3>
+          <p>Terminal-based Python game: guess the sum of two dice with random animations and win/lose feedback.</p>
+          <p class="correlation">Created as an interactive exercise at Scratchpad NZ to demonstrate randomness, loops, and user input.</p>
+          <a href="https://github.com/mebss/Number-Guessing-Game" target="_blank" class="btn">View on GitHub</a>
+        </article>
 
-      <!-- SCRATCHPAD PROJECTS -->
-      <section id="scratchpad">
-        <h2>Scratchpad Projects</h2>
-        <div class="projects-grid">
+        <article class="project-card">
+          <h3>Library Management CLI</h3>
+          <p>Python console app for admins &amp; members to manage books, registration, borrowing, and overdue reports, backed by CSV files.</p>
+          <p class="correlation">Built for Scratchpad NZ workshops to illustrate file I/O and CLI design.</p>
+          <a href="https://github.com/mebss/Library-Management-CLI-" target="_blank" class="btn">View on GitHub</a>
+        </article>
 
-          <article class="project-card">
-            <h3>Turtle Snake Game</h3>
-            <p>Classic Snake in Python using Turtle—arrow-key movement, dynamic food spawning, score tracking, and speed ramp-up.</p>
-            <p class="correlation">Used as a hands-on demo in my Junior Technology Instructor role at Scratchpad NZ to teach event-driven programming with Turtle graphics.</p>
-            <a href="https://github.com/mebss/Turtle-Snake-Game" target="_blank" class="btn">View on GitHub</a>
-          </article>
+      </div>
+    </section>
 
-          <article class="project-card">
-            <h3>Number Guessing Game</h3>
-            <p>Terminal-based Python game: guess the sum of two dice with random animations and win/lose feedback.</p>
-            <p class="correlation">Created as an interactive exercise at Scratchpad NZ to demonstrate randomness, loops, and user input handling.</p>
-            <a href="https://github.com/mebss/Number-Guessing-Game" target="_blank" class="btn">View on GitHub</a>
-          </article>
+  </main>
 
-          <article class="project-card">
-            <h3>Library Management CLI</h3>
-            <p>Python console application for admins &amp; members to manage books, registration, borrowing, and overdue reports, backed by CSV files.</p>
-            <p class="correlation">Built for Scratchpad NZ workshops to illustrate file I/O and command-line interface design.</p>
-            <a href="https://github.com/mebss/Library-Management-CLI-" target="_blank" class="btn">View on GitHub</a>
-          </article>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Mehrab Bhuiyan. All rights reserved.</p>
+  </footer>
 
-        </div>
-      </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-      <p>&copy; 2025 Mehrab Bhuiyan. All rights reserved.</p>
-    </footer>
-
-  </div> <!-- end #page-content -->
-
-  <!-- MODAL SCRIPT -->
+  <!-- MODAL & NAV TOGGLE SCRIPTS -->
   <script>
-    const btn   = document.getElementById('view-demo-btn');
-    const modal = document.getElementById('video-modal');
-    const close = modal.querySelector('.close');
-    const page  = document.getElementById('page-content');
+    // Video modal
+    const viewBtn = document.getElementById('view-demo-btn');
+    const modal   = document.getElementById('video-modal');
+    const close   = modal.querySelector('.close');
+    const page    = document.getElementById('main-content');
 
-    btn.addEventListener('click', () => {
+    viewBtn.addEventListener('click', () => {
       modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden', 'false');
       page.classList.add('blurred-content');
     });
 
     function stopDemo() {
       modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
       page.classList.remove('blurred-content');
       modal.querySelector('video').pause();
     }
@@ -139,22 +147,25 @@
     modal.addEventListener('click', e => {
       if (e.target === modal) stopDemo();
     });
-  </script>
-   <!-- Hide header on scroll -->
-   <script>
-    (function() {
-      const header = document.querySelector('header');
-      let lastY = window.pageYOffset;
-      window.addEventListener('scroll', () => {
-        const currentY = window.pageYOffset;
-        if (currentY > lastY) {
-          header.classList.add('hide');
-        } else {
-          header.classList.remove('hide');
-        }
-        lastY = currentY <= 0 ? 0 : currentY;
+
+    // Hamburger nav toggle
+    const toggle = document.getElementById('nav-toggle');
+    const nav    = document.getElementById('main-nav');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.classList.toggle('open');
+      nav.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close nav on link click
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
       });
-    })();
+    });
   </script>
 
 </body>
