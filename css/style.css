@@ -269,7 +269,6 @@ footer {
   }
 }
 
-/* ─── VIDEO MODAL OVERLAY & CENTERED BOX ─── */
 
 .modal {
   position: fixed;
@@ -318,54 +317,83 @@ footer {
   cursor: pointer;
 }
 
-/* hide the toggle by default on desktop */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-}
+/* …your existing desktop & global styles… */
 
-/* MOBILE BREAKPOINT */
+/* MOBILE ONLY: fullscreen slide-in nav */
 @media (max-width: 768px) {
-  /* show the toggle */
+  /* toggle button sits on top */
   .menu-toggle {
     display: block;
     position: absolute;
-    top: 1.2rem;
-    right: 1.5rem;
-    z-index: 1100;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2000;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #fff;
   }
 
-  /* hide nav by default */
-  nav {
+  /* hide the close button by default */
+  .menu-close {
     display: none;
   }
 
-  /* when nav is “open” we’ll add an .open class */
-  nav.open {
-    display: block;
+  /* nav becomes a fixed overlay offscreen to the right */
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 280px;
+    height: 100vh;
     background: linear-gradient(90deg, #333, #555);
-    padding: 1rem 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1500;
+    padding-top: 4rem;            /* leave space for header area */
+    box-shadow: -4px 0 12px rgba(0,0,0,0.3);
   }
 
-  /* stack links and tighten spacing */
-  nav ul {
-    flex-direction: column;
-    gap: 0;               /* we’ll control padding per link */
+  /* when open, slide it back into view */
+  nav.open {
+    transform: translateX(0);
   }
 
-  nav ul li a {
+  /* show the close button at the top corner */
+  nav.open .menu-close {
     display: block;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* stack and pad your links */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav ul li + li a {
     border-top: 1px solid rgba(255,255,255,0.1);
   }
-
-  /* optional: highlight the first link’s top border */
-  nav ul li:first-child a {
-    border-top: none;
+  nav ul li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: rgba(255,255,255,0.1);
   }
 }
