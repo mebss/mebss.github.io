@@ -843,6 +843,28 @@ footer {
   }
 }
 
+/* ABOUT CARD: single column on mobile */
+@media (max-width: 768px) {
+  .about-card {
+    grid-template-columns: 1fr !important;
+    margin: 0 auto;      /* center it */
+    padding: 1rem;       /* a bit tighter on small */
+  }
+  .about-img-wrapper,
+  .about-text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    width: 100%;               /* full width now */
+    transform: translateX(100%);
+  }
+  .site-nav.open {
+    transform: translateX(0);
+  }
+}
 
 
 /* TIMELINE MOBILE (simplify for tiny screens) */
