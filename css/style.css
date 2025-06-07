@@ -858,14 +858,16 @@ footer {
 
 @media (max-width: 768px) {
   .site-nav {
-    width: 100%;               /* full width now */
+    width: 50%;               /* full width now */
     transform: translateX(100%);
   }
   .site-nav.open {
     transform: translateX(0);
   }
   .site-nav li + li a {
-    border-top: 1px dashed rgba(0,0,0,0.1);
+    border-top: none;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
   }
 }
 
