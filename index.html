@@ -8,124 +8,424 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Mehrab Bhuiyan</h1>
-    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Mehrab Bhuiyan</h1>
+        <p class="subtitle">Software Engineer &amp; Data Analyst</p>
+      </div>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#volunteering">Volunteering</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="social-links">
+        <!-- Email -->
+        <a href="mailto:hi@mebss.xyz" aria-label="Email">
+          <img class="icon" src="images/mail.png" alt="Email icon">
+        </a>
+        <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank" aria-label="LinkedIn">
+          <img class="icon" src="images/linkedin.png" alt="LinkedIn icon">
+        </a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
   </header>
 
-  <!-- NAV (moved outside header) -->
-  <nav>
-    <button class="menu-close" aria-label="Close menu">✕</button>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="#volunteering">Volunteering</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- ABOUT SECTION -->
   <section id="about">
     <h2>About Me</h2>
-    <div class="about-container">
-      <img src="images/profile.jpg" alt="Profile Picture of Mehrab Bhuiyan">
-      <div class="section-content">
-        <p>
-          Hello! I'm <strong>Mehrab Bhuiyan</strong>, a passionate software engineer specializing in full stack development, IT support, and technology instruction. I'm driven by a love for solving complex problems and creating innovative solutions that seamlessly integrate technology with user-centric design.
-        </p>
-        <p>
-          Currently pursuing a Master's in Software Engineering, I aim to develop projects that not only push technological boundaries but also make a real-world impact. I'm always eager to learn new tools and embrace challenges that foster both professional growth and creative innovation.
-        </p>
-        <p>
-          Whether it's building cutting-edge applications or mentoring aspiring developers, I believe in continuous learning and delivering excellence in every project.
-        </p>
+    <div class="about-card">
+      <div class="about-img-wrapper">
+        <img src="images/profile.jpg" alt="Profile Picture of Mehrab Bhuiyan">
+      </div>
+      <div class="about-text section-content">
+        <p>Hello! I’m <strong>Mehrab Bhuiyan</strong>, a passionate software engineer specializing in full-stack development, IT support, and technology instruction. I love solving complex problems and crafting innovative solutions that marry technology with user-centric design.</p>
+        <p>Currently pursuing my Master’s in Software Engineering, I aim to build projects that not only push technological boundaries but also make a meaningful real-world impact. I’m always eager to learn new tools and tackle challenges that fuel both professional growth and creative innovation.</p>
+        <p>Whether I’m building cutting-edge applications or mentoring aspiring developers, I believe in continuous learning and delivering excellence in every project.</p>
+        <ul class="highlights">
+          <li>🎓 Master’s Student in Software Engineering</li>
+          <li>💻 2+ years Full-Stack Development</li>
+          <li>🎤 Tech Instructor & Workshop Facilitator</li>
+          <li>☁️ AWS, Docker & Modern DevOps</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- EDUCATION SECTION -->
+
   <section id="education">
     <h2>Education</h2>
     <div class="section-content">
-      <ul>
-        <li>
-          <strong>Master’s Degree, Software Engineering</strong><br>
-          Yoobee College of Creative Innovation, Auckland, New Zealand<br>
-          <em>(Jul 2024 – Present)</em>
-        </li>
-        <li>
-          <strong>Bachelor of Computer Science</strong><br>
-          Swinburne University of Technology, Sarawak, Malaysia<br>
-          <em>(Mar 2021 – Dec 2023)</em>
-        </li>
-        <li>
-          <strong>Diploma of Education, Computer Engineering</strong><br>
-          Penang Skills Development Centre, Penang, Malaysia<br>
-          <em>(Feb 2018 – Sep 2020)</em>
-        </li>
-      </ul>
+      <div class="education-timeline">
+        <div class="timeline-item">
+          <div class="marker"></div>
+          <div class="details">
+            <h3>Master’s Degree, Software Engineering</h3>
+            <p>Yoobee College of Creative Innovation, Auckland, New Zealand<br>
+              <em>Jul 2024 – Present</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="marker"></div>
+          <div class="details">
+            <h3>Bachelor of Computer Science</h3>
+            <p>Swinburne University of Technology, Sarawak, Malaysia<br>
+              <em>Mar 2021 – Dec 2023</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="marker"></div>
+          <div class="details">
+            <h3>Diploma of Education, Computer Engineering</h3>
+            <p>Penang Skills Development Centre, Penang, Malaysia<br>
+              <em>Feb 2018 – Sep 2020</em>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
 
   <!-- SKILLS SECTION -->
   <section id="skills">
     <h2>Skills</h2>
     <div class="section-content">
-      <ul>
-        <li><strong>Programming Languages:</strong> Python, C/C++, Java, Arduino, PHP, JavaScript, HTML/HTML5, CSS, Kotlin, C#, Rust</li>
-        <li><strong>Software Tools & Frameworks:</strong> MySQL, Laravel, Vue.js, AWS, Docker, Git</li>
-        <li><strong>Technical Skills:</strong> Full Stack Development, Network Troubleshooting, IT Infrastructure Management, Computing, Software Development</li>
-        <li><strong>Project Management & Planning:</strong> Agile Methodologies, Jira, Trello</li>
-        <li><strong>Soft Skills:</strong> Communication, Public Speaking, Time Management, Adaptability, Problem Solving, Leadership, Teamwork</li>
-        <li><strong>Teaching Skills:</strong> Curriculum Development, Workshop Facilitation, Classroom Management</li>
-      </ul>
+      <div class="skills-container">
+        
+        <!-- Programming Languages -->
+        <h3>Programming Languages</h3>
+        <div class="skill">
+          <span class="skill-name">Python</span>
+          <div class="skill-bar" data-percent="90%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">C / C++</span>
+          <div class="skill-bar" data-percent="85%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Java</span>
+          <div class="skill-bar" data-percent="80%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Arduino</span>
+          <div class="skill-bar" data-percent="75%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">PHP</span>
+          <div class="skill-bar" data-percent="70%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-bar" data-percent="80%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">HTML / HTML5</span>
+          <div class="skill-bar" data-percent="85%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">CSS</span>
+          <div class="skill-bar" data-percent="80%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Kotlin</span>
+          <div class="skill-bar" data-percent="60%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">C#</span>
+          <div class="skill-bar" data-percent="65%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Rust</span>
+          <div class="skill-bar" data-percent="55%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        
+        <!-- Software Tools & Frameworks -->
+        <h3>Software Tools &amp; Frameworks</h3>
+        <div class="skill">
+          <span class="skill-name">MySQL</span>
+          <div class="skill-bar" data-percent="85%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Laravel</span>
+          <div class="skill-bar" data-percent="75%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Vue.js</span>
+          <div class="skill-bar" data-percent="70%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">AWS</span>
+          <div class="skill-bar" data-percent="65%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Docker</span>
+          <div class="skill-bar" data-percent="75%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Git</span>
+          <div class="skill-bar" data-percent="90%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        
+        <!-- Technical Skills -->
+        <h3>Technical Skills</h3>
+        <div class="skill">
+          <span class="skill-name">Full Stack Development</span>
+          <div class="skill-bar" data-percent="85%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Network Troubleshooting</span>
+          <div class="skill-bar" data-percent="70%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">IT Infrastructure Management</span>
+          <div class="skill-bar" data-percent="75%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Software Development</span>
+          <div class="skill-bar" data-percent="85%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        
+        <!-- Project Management & Planning -->
+        <h3>Project Management &amp; Planning</h3>
+        <div class="skill">
+          <span class="skill-name">Agile Methodologies</span>
+          <div class="skill-bar" data-percent="80%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Jira</span>
+          <div class="skill-bar" data-percent="75%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Trello</span>
+          <div class="skill-bar" data-percent="70%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        
+        <!-- Soft Skills -->
+        <h3>Soft Skills</h3>
+        <div class="skill">
+          <span class="skill-name">Communication</span>
+          <div class="skill-bar" data-percent="90%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Public Speaking</span>
+          <div class="skill-bar" data-percent="85%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Time Management</span>
+          <div class="skill-bar" data-percent="80%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Adaptability</span>
+          <div class="skill-bar" data-percent="85%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Problem Solving</span>
+          <div class="skill-bar" data-percent="90%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Leadership</span>
+          <div class="skill-bar" data-percent="75%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Teamwork</span>
+          <div class="skill-bar" data-percent="85%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        
+        <!-- Teaching Skills -->
+        <h3>Teaching Skills</h3>
+        <div class="skill">
+          <span class="skill-name">Curriculum Development</span>
+          <div class="skill-bar" data-percent="80%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Workshop Facilitation</span>
+          <div class="skill-bar" data-percent="75%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Classroom Management</span>
+          <div class="skill-bar" data-percent="85%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        
+      </div>
     </div>
+    
+   
   </section>
+
 
   <!-- EXPERIENCE SECTION -->
   <section id="experience">
     <h2>Experience</h2>
     <div class="section-content">
-      <p><strong>Data Analyst Intern</strong> – Favour <em>(Apr 2025 – Present, Auckland, NZ)</em></p>
-      <ul>
-        <li>Built and maintained ETL pipelines to clean, integrate, and document Amplitude &amp; MySQL data.</li>
-        <li>Developed partner-facing and internal reporting portals with automated reports, interactive dashboards, and alerting.</li>
-        <li>Performed user behavior, cohort, and A/B analyses to drive product enhancements and ingredient-trend insights.</li>
-        <li>Presented clear, data-driven recommendations to founders and cross-functional teams to inform strategic decisions.</li>
-      </ul>
+      <div class="experience-timeline">
 
-      <p><strong>Tutor (Part-time)</strong> – Enrich Academy <em>(Oct 2024 – Present, Auckland, NZ)</em></p>
-      <ul>
-        <li>Conduct personalized tutoring sessions in Mathematics, English, and Science.</li>
-        <li>Create customized lesson plans to meet unique learning needs.</li>
-        <li>Monitor and track academic progress, adapting strategies for continuous improvement.</li>
-      </ul>
+        <!-- Data Analyst Intern -->
+        <div class="timeline-item">
+          <div class="marker"></div>
+          <div class="details">
+            <h3>
+              Data Analyst Intern
+              <span class="date">(Apr 2025 – Present, Auckland, NZ)</span>
+            </h3>
+            <ul>
+              <li>Built and maintained ETL pipelines to clean, integrate, and document Amplitude &amp; MySQL data.</li>
+              <li>Developed partner-facing and internal reporting portals with automated reports, interactive dashboards, and alerting.</li>
+              <li>Performed user behavior, cohort, and A/B analyses to drive product enhancements and ingredient-trend insights.</li>
+              <li>Presented clear, data-driven recommendations to founders and cross-functional teams to inform strategic decisions.</li>
+            </ul>
+          </div>
+        </div>
 
-      <p><strong>Junior Technology Instructor (Casual)</strong> – SCRATCHPAD NZ <em>(Sep 2024 – Present, Auckland, NZ)</em></p>
-      <ul>
-        <li>Lead interactive sessions on programming fundamentals using Python, Scratch, and Arduino.</li>
-        <li>Foster creativity and problem-solving skills through project-based learning.</li>
-        <li>Provide regular progress updates and feedback to parents.</li>
-      </ul>
+        <!-- Tutor (Part-time) -->
+        <div class="timeline-item">
+          <div class="marker"></div>
+          <div class="details">
+            <h3>
+              Tutor (Part-time)
+              <span class="date">(Oct 2024 – Present, Auckland, NZ)</span>
+            </h3>
+            <ul>
+              <li>Conduct personalized tutoring sessions in Mathematics, English, and Science.</li>
+              <li>Create customized lesson plans to meet unique learning needs.</li>
+              <li>Monitor and track academic progress, adapting strategies for continuous improvement.</li>
+            </ul>
+          </div>
+        </div>
 
-      <p><strong>Assistant IT Support</strong> – Air Smart Technology SDN BHD <em>(Apr 2019 – Sep 2020, Penang, Malaysia)</em></p>
-      <ul>
-        <li>Oversaw inventory management system, ensuring accurate asset tracking.</li>
-        <li>Provided network troubleshooting and IT support to improve system reliability.</li>
-        <li>Contributed to process improvements for faster technical support response.</li>
-      </ul>
+        <!-- Junior Technology Instructor -->
+        <div class="timeline-item">
+          <div class="marker"></div>
+          <div class="details">
+            <h3>
+              Junior Technology Instructor (Casual)
+              <span class="date">(Sep 2024 – Present, Auckland, NZ)</span>
+            </h3>
+            <ul>
+              <li>Lead interactive sessions on programming fundamentals using Python, Scratch, and Arduino.</li>
+              <li>Foster creativity and problem-solving skills through project-based learning.</li>
+              <li>Provide regular progress updates and feedback to parents.</li>
+            </ul>
+          </div>
+        </div>
 
-      <p><strong>Junior Software Developer</strong> – Skylogistics Tours &amp; Travel SDN BHD <em>(Jan 2018 – Feb 2019, Penang, Malaysia)</em></p>
-      <ul>
-        <li>Enhanced booking and customer management software (TravelPoint, Galileo systems).</li>
-        <li>Addressed bugs, optimized system performance, and improved functionality.</li>
-      </ul>
+        <!-- Assistant IT Support -->
+        <div class="timeline-item">
+          <div class="marker"></div>
+          <div class="details">
+            <h3>
+              Assistant IT Support
+              <span class="date">(Apr 2019 – Sep 2020, Penang, Malaysia)</span>
+            </h3>
+            <ul>
+              <li>Oversaw inventory management system, ensuring accurate asset tracking.</li>
+              <li>Provided network troubleshooting and IT support to improve system reliability.</li>
+              <li>Contributed to process improvements for faster technical support response.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Junior Software Developer -->
+        <div class="timeline-item">
+          <div class="marker"></div>
+          <div class="details">
+            <h3>
+              Junior Software Developer
+              <span class="date">(Jan 2018 – Feb 2019, Penang, Malaysia)</span>
+            </h3>
+            <ul>
+              <li>Enhanced booking and customer management software (TravelPoint, Galileo systems).</li>
+              <li>Addressed bugs, optimized system performance, and improved functionality.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
+
 
   <!-- PROJECTS PREVIEW -->
   <section id="projects-preview">
@@ -134,40 +434,62 @@
     <a href="projects.html" class="btn">View All Projects →</a>
   </section>
 
-  <!-- VOLUNTEERING SECTION -->
-  <section id="volunteering">
+ <section id="volunteering">
     <h2>Volunteering</h2>
     <div class="section-content">
-      <p><strong>Yoobee MSE-B Student Representative</strong> <em>(Jul 2024 – Present)</em></p>
-      <ul>
-        <li>Serve as liaison between students and faculty, addressing concerns and facilitating communication.</li>
-        <li>Coordinate events and activities, fostering a supportive environment for MSE students.</li>
-      </ul>
+      <div class="volunteering-timeline">
 
-      <p><strong>Te Reo Language Day | Yoobee Colleges</strong> <em>(Sep 12, 2024)</em></p>
-      <ul>
-        <li>Assisted at the booth serving coffee and helped with event preparations.</li>
-        <li>Engaged with attendees, providing information and promoting Te Reo Māori language and culture.</li>
-      </ul>
+        <!-- Student Representative -->
+        <div class="timeline-item">
+          <div class="marker"></div>
+          <div class="details">
+            <h3>
+              MSE-B Student Representative
+              <span class="date">(Jul 2024 – Present)</span>
+            </h3>
+            <ul>
+              <li>Serve as liaison between students and faculty, addressing concerns and facilitating communication.</li>
+              <li>Coordinate events and activities, fostering a supportive environment for MSE students.</li>
+            </ul>
+          </div>
+        </div>
 
-      <p><strong>Spring Sizzle Event | Yoobee Colleges</strong> <em>(Oct 11, 2024)</em></p>
-      <ul>
-        <li>Collaborated with peers and tutors to plan and manage the event for students and staff.</li>
-        <li>Served both regular and vegetarian sausages, ensuring a welcoming and inclusive atmosphere.</li>
-      </ul>
+        <!-- Te Reo Language Day -->
+        <div class="timeline-item">
+          <div class="marker"></div>
+          <div class="details">
+            <h3>
+              Te Reo Language Day
+              <span class="date">(Sep 12, 2024)</span>
+            </h3>
+            <ul>
+              <li>Assisted at the booth serving coffee and helped with event preparations.</li>
+              <li>Engaged with attendees, providing information and promoting Te Reo Māori language and culture.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Spring Sizzle Event -->
+        <div class="timeline-item">
+          <div class="marker"></div>
+          <div class="details">
+            <h3>
+              Spring Sizzle Event
+              <span class="date">(Oct 11, 2024)</span>
+            </h3>
+            <ul>
+              <li>Collaborated with peers and tutors to plan and manage the event for students and staff.</li>
+              <li>Served both regular and vegetarian sausages, ensuring a welcoming and inclusive atmosphere.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="section-content">
-      <p><strong>Email:</strong> <a href="mailto:hi@mebss.xyz">hi@mebss.xyz</a></p>
-      <p><strong>Phone:</strong> 027-499-5368</p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank">linkedin.com/in/mehrab-bhuiyan</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/mebss" target="_blank">github.com/mebss</a></p>
-    </div>
-  </section>
+
+  
 
   <!-- FOOTER -->
   <footer>
@@ -175,33 +497,8 @@
   </footer>
 
   <!-- SCRIPTS -->
-  <script>
-    (function() {
-      const header = document.querySelector('header');
-      let lastY = window.pageYOffset;
-      window.addEventListener('scroll', () => {
-        const currentY = window.pageYOffset;
-        header.classList.toggle('hide', currentY > lastY);
-        lastY = Math.max(0, currentY);
-      });
-    })();
-  </script>
+  <script src="js/main.js"></script>
 
-  <script>
-    const btnOpen  = document.querySelector('.menu-toggle');
-    const btnClose = document.querySelector('.menu-close');
-    const nav      = document.querySelector('nav');
-
-    btnOpen.addEventListener('click', () => {
-      nav.classList.add('open');
-      btnOpen.setAttribute('aria-label','Close menu');
-    });
-
-    btnClose.addEventListener('click', () => {
-      nav.classList.remove('open');
-      btnOpen.setAttribute('aria-label','Open menu');
-    });
-  </script>
 
 </body>
 </html>

@@ -22,16 +22,42 @@
   <!-- PAGE CONTENT -->
   <div id="page-content">
 
-    <!-- HEADER & NAVIGATION -->
-    <header>
-      <h1>Mehrab Bhuiyan</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html" class="active">Projects</a></li>
-        </ul>
-      </nav>
+    <header class="site-header">
+      <div class="header-inner">
+        <!-- Branding -->
+        <div class="brand">
+          <h1>Mehrab Bhuiyan</h1>
+          <p class="subtitle">Software Engineer &amp; Data Analyst</p>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="site-nav" id="site-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Social Icons -->
+        <div class="social-links">
+          <!-- Email -->
+          <a href="mailto:hi@mebss.xyz" aria-label="Email">
+            <img class="icon" src="images/mail.png" alt="Email icon">
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank" aria-label="LinkedIn">
+            <img class="icon" src="images/linkedin.png" alt="LinkedIn icon">
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+          ☰
+        </button>
+      </div>
     </header>
+
 
     <!-- MAIN CONTENT -->
     <main>
@@ -118,44 +144,8 @@
   </div> <!-- end #page-content -->
 
   <!-- MODAL SCRIPT -->
-  <script>
-    const btn   = document.getElementById('view-demo-btn');
-    const modal = document.getElementById('video-modal');
-    const close = modal.querySelector('.close');
-    const page  = document.getElementById('page-content');
+  <script src="js/main.js"></script>
 
-    btn.addEventListener('click', () => {
-      modal.style.display = 'flex';
-      page.classList.add('blurred-content');
-    });
-
-    function stopDemo() {
-      modal.style.display = 'none';
-      page.classList.remove('blurred-content');
-      modal.querySelector('video').pause();
-    }
-
-    close.addEventListener('click', stopDemo);
-    modal.addEventListener('click', e => {
-      if (e.target === modal) stopDemo();
-    });
-  </script>
-   <!-- Hide header on scroll -->
-   <script>
-    (function() {
-      const header = document.querySelector('header');
-      let lastY = window.pageYOffset;
-      window.addEventListener('scroll', () => {
-        const currentY = window.pageYOffset;
-        if (currentY > lastY) {
-          header.classList.add('hide');
-        } else {
-          header.classList.remove('hide');
-        }
-        lastY = currentY <= 0 ? 0 : currentY;
-      });
-    })();
-  </script>
 
 </body>
 </html>

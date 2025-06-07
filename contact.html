@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Mehrab Bhuiyan</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Mehrab Bhuiyan</h1>
+        <p class="subtitle">Software Engineer &amp; Data Analyst</p>
+      </div>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="social-links">
+        <a href="mailto:hi@mebss.xyz" aria-label="Email">
+          <img class="icon" src="images/mail.png" alt="Email icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank" aria-label="LinkedIn">
+          <img class="icon" src="images/linkedin.png" alt="LinkedIn icon" />
+        </a>
+      </div>
+
+      <button class="menu-toggle"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+              aria-controls="site-nav">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-container">
+
+      <!-- Contact Info -->
+      <div class="contact-info section-content">
+        <p><strong>Email:</strong> <a href="mailto:hi@mebss.xyz">hi@mebss.xyz</a></p>
+        <p><strong>Phone:</strong> +64 27 499 5368</p>
+        <p><strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank">
+            linkedin.com/in/mehrab-bhuiyan
+          </a>
+        </p>
+        <p><strong>GitHub:</strong>
+          <a href="https://github.com/mebss" target="_blank">
+            github.com/mebss
+          </a>
+        </p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper section-content">
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/#b4b8b7s"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <!-- honeypot -->
+          <input type="text" name="_gotcha" style="display:none" />
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Mehrab Bhuiyan. All rights reserved.</p>
+  </footer>
+
+  <!-- SINGLE SCRIPT ENTRY -->
+  <script src="js/main.js"></script>
+</body>
+</html>

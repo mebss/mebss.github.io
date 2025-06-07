@@ -27,70 +27,156 @@ body {
 }
 
 /* Layout for header, nav, section, and footer */
-header, nav, section, footer {
+ section {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 1.5rem 0;
 }
 
-/* Sticky Header with Gradient & Shadow */
-header {
+/* ─── SITE HEADER & NAV STYLES ───────────────────────────────────────── */
+
+/* Sticky, glass-morphic header */
+.site-header {
   position: sticky;
   top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
   z-index: 1000;
-  text-align: center;
-  background: linear-gradient(90deg, #333, #555);
-  color: #fff;
-  margin-bottom: 1rem;
-  padding: 1rem 0;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-header h1 {
-  margin-bottom: 0.5rem;
+/* Inner flex container */
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Branding block */
+.brand h1 {
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #333;
 }
-/* DESKTOP & TABLET: just hide the mobile buttons and style the nav bar */
-@media (min-width: 769px) {
-  /* hide hamburger & close icons */
-  .menu-toggle,
-  .menu-close {
-    display: none !important;
-  }
+.brand .subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #555;
+}
 
-  /* restore nav as a dark bar under the header */
-  nav {
-    position: static !important;     /* back in-flow */
-    transform: none !important;      /* no slides or shifts */
-    background: linear-gradient(90deg, #333, #555);
-    padding: 1rem 0;                 /* vertical spacing like before */
-    margin: -1rem auto 1rem;         /* pull up under header, then spacing below */
-    width: 90%;
-    max-width: 1100px;
-    box-shadow: none !important;     /* remove any mobile shadows */
-  }
-  /* Navigation */
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 0.5rem;
-  }
+/* Desktop nav */
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.site-nav a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease;
+}
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #76c7c0;
+  transition: width 0.3s ease;
+}
+.site-nav a:hover,
+.site-nav a.active {
+  color: #000;
+}
+.site-nav a:hover::after,
+.site-nav a.active::after {
+  width: 100%;
+}
 
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
+/* Social icon */
+.social-links a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-left: 1rem;
+}
+.social-links .icon {
+  width: 100%;
+  height: 100%;
+  fill: #0077b5;  /* LinkedIn blue */
+  transition: fill 0.2s ease;
+}
+.social-links a:hover .icon {
+  fill: #005582;
+}
 
-  nav ul li a:hover,
-  nav ul li a.active {
-    color: #ffcc00;
+/* Hamburger toggle (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* ─── MOBILE STYLES ────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Slide-in nav panel */
+  .site-nav {
+    position: fixed;
+    top: 0; 
+    right: 0;
+    width: 75%;
+    height: 100vh;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding-top: 4rem;
+    box-shadow: -4px 0 12px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+  .site-nav.open {
+    transform: translateX(0);
+  }
+  
+  /* Stack links vertically */
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  .site-nav li + li a {
+    border-top: 1px solid #ddd;
+  }
+  .site-nav a {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Hide social icons on mobile if desired */
+  .social-links {
+    display: none;
   }
 }
+
 
 
 /* Section Styling with Hover Animation */
@@ -116,30 +202,278 @@ section h2 {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* About Section */
-#about h2 {
-  text-align: center;
-  margin-bottom: 1rem;
+/* ABOUT SECTION */
+#about {
+  padding: 4rem 1rem;
+  background: #f5f8fc;
 }
 
-.about-container {
+#about h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Card container with grid */
+.about-card {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards ease-out;
+}
+
+/* Image wrapper so we can control aspect */
+.about-img-wrapper {
+  background: linear-gradient(135deg, #b4b8b7 0%, #b4b8b7 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  text-align: left;
-  margin: 0 auto;
 }
 
-#about img {
-  max-width: 300px;
-  width: 200%;
+.about-img-wrapper img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 0;
   border: 4px solid #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
+/* Text side */
+.about-text {
+  padding: 1.5rem 2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Highlights list with icons */
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+.highlights li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Timeline container */
+.education-timeline {
+  position: relative;
+  margin-left: 1rem;
+  padding-left: 1.5rem;
+}
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #e0e0e0;
+}
+
+/* Each entry */
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* The dot marker */
+.timeline-item .marker {
+  position: absolute;
+  left: -9px;               /* half of marker width + border */
+  top: 5px;                 /* aligns roughly with first line of text */
+  width: 12px;
+  height: 12px;
+  background: #b4b8b7;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #e0e0e0;
+}
+
+/* Entry details */
+.timeline-item .details {
+  background: #f9fbfd;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  width: 100%;
+}
+.timeline-item .details h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+  color: #333;
+}
+.timeline-item .details p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* EXPERIENCE TIMELINE */
+.experience-timeline {
+  position: relative;
+  margin-left: 1rem;
+  padding-left: 1.5rem;
+}
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #e0e0e0;
+}
+
+/* Timeline entry */
+.experience-timeline .timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/* Marker dot */
+.experience-timeline .marker {
+  position: absolute;
+  left: -9px;        /* centers the dot on the line */
+  top: 8px;          /* adjust to align with text */
+  width: 12px;
+  height: 12px;
+  background: #b4b8b7;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #e0e0e0;
+}
+
+/* Details card */
+.experience-timeline .details {
+  background: #f9fbfd;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.experience-timeline .details h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.experience-timeline .details .date {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Keep your existing list spacing */
+.experience-timeline .details ul {
+  margin: 0;
+  padding-left: 1.2rem; /* match your .section-content ul */
+}
+/* Add to both timeline detail cards */
+.education-timeline .details,
+.experience-timeline .details {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Lift on hover */
+.education-timeline .timeline-item:hover .details,
+.experience-timeline .timeline-item:hover .details {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* VOLUNTEERING TIMELINE */
+.volunteering-timeline {
+  position: relative;
+  margin-left: 1rem;
+  padding-left: 1.5rem;
+}
+.volunteering-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #e0e0e0;
+}
+
+/* Each entry */
+.volunteering-timeline .timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/* Marker dot */
+.volunteering-timeline .marker {
+  position: absolute;
+  left: -9px;   /* centers the dot */
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: #b4b8b7;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #e0e0e0;
+}
+
+/* Card details */
+.volunteering-timeline .details {
+  background: #f9fbfd;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.volunteering-timeline .details:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.volunteering-timeline .details h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.volunteering-timeline .details .date {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Keep your list styling */
+.volunteering-timeline .details ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
 
 /* Section Content */
 .section-content {
@@ -155,6 +489,69 @@ section h2 {
   list-style-type: disc;
   margin-left: 2rem;
 }
+
+/* Skills container should reset list styles */
+.section-content .skills-container {
+  margin: 0;
+  padding: 0;
+ /* ← ADD THIS: turn it into a responsive 2-column grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem 2rem;
+}
+
+/* Each skill row */
+.section-content .skill {
+  margin-bottom: 1rem;
+}
+
+/* Skill title */
+.section-content .skill-name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Bar background */
+.section-content .skill-bar {
+  position: relative;
+  background: #e0e0e0;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 20px;
+}
+
+/* Animated fill */
+.section-content .skill-bar-fill {
+  background: #76c7c0;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  transition: width 1.2s ease-in-out;
+}
+
+/* Optional: show percentage on hover */
+.section-content .skill-bar:hover .skill-bar-fill::after {
+  content: attr(data-percent);
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Make headings span the full width of the two-column grid */
+.section-content .skills-container h3 {
+  grid-column: 1 / -1;
+  margin-top: 2rem;    /* give some breathing room above each category */
+  font-size: 1.1rem;   /* tweak as you like */
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.25rem;
+}
+
+ 
 
 /* Fade-in for index project items */
 .project-item {
@@ -322,84 +719,126 @@ footer {
 
 
 
+/* ─── CONTACT PAGE STYLES ─────────────────────────────────────────────── */
 
-/* …your existing desktop & global styles… */
+/* Contact section container */
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
 
-/* MOBILE ONLY: fullscreen slide-in nav */
-@media (max-width: 768px) {
-  /* toggle button sits on top */
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 2000;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    color: #fff;
-  }
+/* Shared card look */
+.contact-info,
+.contact-form-wrapper {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius, 8px);
+  box-shadow: var(--shadow-medium, 0 8px 24px rgba(0,0,0,0.1));
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-info:hover,
+.contact-form-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium, 0 12px 32px rgba(0,0,0,0.15));
+}
 
-  /* hide the close button by default */
-  .menu-close {
-    display: none;
-  }
+/* Animated reveal on load/scroll */
 
-  /* nav becomes a fixed overlay offscreen to the right */
-  nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 75%;
-    max-width: 280px;
-    height: 100vh;
-    background: linear-gradient(90deg, #333, #555);
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 1500;
-    padding-top: 4rem;            /* leave space for header area */
-    box-shadow: -4px 0 12px rgba(0,0,0,0.3);
-  }
+.contact-info.visible,
+.contact-form-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  /* when open, slide it back into view */
-  nav.open {
-    transform: translateX(0);
-  }
+/* Contact Info styling */
+.contact-info h2 {
+  font-family: var(--font-heading, 'Montserrat'), sans-serif;
+  margin-bottom: 1rem;
+  color: var(--color-text, #333);
+}
+.contact-info p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--color-text, #333);
+}
+.contact-info a {
+  color: var(--color-primary, #909291);
+  font-weight: 500;
+}
+.contact-info ul {
+  list-style: none;
+  margin-top: 1.5rem;
+  padding: 0;
+}
+.contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.contact-info li img {
+  width: 28px;
+  height: 28px;
+  margin-right: 0.75rem;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+}
 
-  /* show the close button at the top corner */
-  nav.open .menu-close {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
-  }
+/* Contact Form styling */
+.contact-form-wrapper h2 {
+  font-family: var(--font-heading, 'Montserrat'), sans-serif;
+  margin-bottom: 1rem;
+  color: var(--color-text, #333);
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  border: 2px solid #ddd;
+  border-radius: var(--radius, 8px);
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  background: #fafafa;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-primary, #000000);
+  background: #fff;
+  outline: none;
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.contact-form button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--color-primary, #b4b8b7);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius, 8px);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.contact-form button:hover {
+  background: var(--color-primary-dark, #000000);
+  transform: translateY(-2px);
+}
+.contact-form button:active {
+  transform: translateY(0);
+}
 
-  /* stack and pad your links */
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  nav ul li + li a {
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-  nav ul li a {
-    display: block;
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  nav ul li a:hover,
-  nav ul li a.active {
-    background: rgba(255,255,255,0.1);
+/* Mobile adjustment */
+@media (max-width: 600px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    padding: 1rem 0;
   }
 }
