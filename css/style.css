@@ -842,3 +842,25 @@ footer {
     padding: 1rem 0;
   }
 }
+
+/* ABOUT CARD MOBILE */
+@media (max-width: 768px) {
+  .about-card { grid-template-columns: 1fr; }
+}
+
+/* TIMELINE MOBILE (simplify for tiny screens) */
+@media (max-width: 480px) {
+  .education-timeline,
+  .experience-timeline,
+  .volunteering-timeline {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .timeline-item { display: block; padding-left: 0; }
+  .timeline-item .marker { display: none; }
+}
+
+/* REDUCE SECTION PADDING ON VERY SMALL */
+@media (max-width: 400px) {
+  section { padding: 1rem; }
+}
