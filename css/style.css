@@ -843,10 +843,7 @@ footer {
   }
 }
 
-/* ABOUT CARD MOBILE */
-@media (max-width: 768px) {
-  .about-card { grid-template-columns: 1fr; }
-}
+
 
 /* TIMELINE MOBILE (simplify for tiny screens) */
 @media (max-width: 480px) {
