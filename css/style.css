@@ -858,8 +858,7 @@ footer {
 
 @media (max-width: 768px) {
   .site-nav {
-    width: auto; 
-    height: auto;              /* full width now */
+    width: auto;              /* full width now */
     transform: translateX(100%);
   }
   .site-nav.open {
@@ -878,8 +877,24 @@ footer {
   .site-nav a.active {
     background: rgba(0,0,0,0.05);
   }
+  .menu-close {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  z-index: 1001;
+  }
 }
 
+/* Hide by default on desktop */
+@media (min-width:769px) {
+  .menu-close { display: none; }
+}
 
 /* TIMELINE MOBILE (simplify for tiny screens) */
 @media (max-width: 480px) {

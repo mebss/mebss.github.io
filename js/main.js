@@ -10,12 +10,38 @@
 })();
 
 // 2. Mobile menu toggle
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-  const nav = document.querySelector('.site-nav');
-  const expanded = nav.classList.toggle('open');
-  document.querySelector('.menu-toggle')
-          .setAttribute('aria-expanded', expanded);
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const closeBtn  = document.querySelector('.menu-close');
+  const nav       = document.querySelector('.site-nav');
+
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    toggleBtn.setAttribute('aria-expanded', isOpen);
+  });
+
+  closeBtn.addEventListener('click', () => {
+    nav.classList.remove('open');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+  });
+
+  // click outside to close
+  document.addEventListener('click', (e) => {
+    if (!nav.classList.contains('open')) return;
+    if (e.target.closest('.site-nav') || e.target.closest('.menu-toggle')) return;
+    nav.classList.remove('open');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+  });
+
+  // link clicks also close
+  nav.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    })
+  );
 });
+
 
 // 3. Animate skill bars
 window.addEventListener('DOMContentLoaded', () => {
