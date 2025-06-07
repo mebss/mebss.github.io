@@ -858,7 +858,8 @@ footer {
 
 @media (max-width: 768px) {
   .site-nav {
-    width: 50%;               /* full width now */
+    width: auto; 
+    height: auto;              /* full width now */
     transform: translateX(100%);
   }
   .site-nav.open {
@@ -868,6 +869,14 @@ footer {
     border-top: none;
     margin-top: 0.5rem;
     padding-top: 0.5rem;
+  
+  }
+  .site-nav a::after {
+    display: none;
+  }
+  
+  .site-nav a.active {
+    background: rgba(0,0,0,0.05);
   }
 }
 
