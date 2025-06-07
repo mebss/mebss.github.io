@@ -864,6 +864,9 @@ footer {
   .site-nav.open {
     transform: translateX(0);
   }
+  .site-nav li + li a {
+    border-top: 1px dashed rgba(0,0,0,0.1);
+  }
 }
 
 
