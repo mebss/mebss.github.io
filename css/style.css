@@ -912,3 +912,22 @@ footer {
 @media (max-width: 400px) {
   section { padding: 1rem; }
 }
+
+/* in style.css, under your contact styles */
+#form-status {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  min-height: 1.2em;
+  /* default text color */
+  color: #333;
+}
+
+/* success state */
+#form-status.success {
+  color: var(--color-primary, #76c7c0);
+}
+
+/* error state */
+#form-status.error {
+  color: #e04848; /* or another error shade you like */
+}

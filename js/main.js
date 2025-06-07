@@ -50,3 +50,39 @@ window.addEventListener('DOMContentLoaded', () => {
     fill.style.width = bar.dataset.percent;
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  const statusDiv = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    statusDiv.textContent = 'Sending…';
+    statusDiv.className = ''; // clear any prior state
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        statusDiv.textContent = 'Thanks for your message! I’ll get back to you soon.';
+        statusDiv.classList.add('success');
+        form.reset();
+      } else {
+        const errorData = await response.json();
+        statusDiv.textContent = errorData.error || 'Oops—there was a problem sending your message.';
+        statusDiv.classList.add('error');
+      }
+    } catch (err) {
+      statusDiv.textContent = 'Network error. Please try again later.';
+      statusDiv.classList.add('error');
+    }
+  });
+});
+
