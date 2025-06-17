@@ -86,3 +86,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  // ——— Video Modal ———
+  const viewBtn  = document.getElementById('view-demo-btn');
+  const modal    = document.getElementById('video-modal');
+  const closeBtn = modal.querySelector('.close');
+
+  if (viewBtn && modal && closeBtn) {
+    // open modal
+    viewBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+    // close when “×” clicked
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    // close when clicking outside video
+    window.addEventListener('click', e => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+  }
+});
