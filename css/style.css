@@ -171,10 +171,7 @@ body {
     font-size: 1.1rem;
   }
   
-  /* Hide social icons on mobile if desired */
-  .social-links {
-    display: none;
-  }
+  
 }
 
 
