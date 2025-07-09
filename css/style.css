@@ -923,20 +923,32 @@ footer {
   margin-top: 1rem;
 }
 
+/* Clickable Card Wrapper */
+.cert-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+/* Card Base */
 .cert-card {
   background-color: #fafafa;
   border-left: 4px solid #76c7c0;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* ✅ ensures consistent sizing */
 }
 
-.cert-card:hover {
+/* Hover Effect (redundant definition removed) */
+.cert-link:hover .cert-card {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Header Text */
 .cert-card h3 {
   font-size: 1rem;
   margin-bottom: 0.4rem;
@@ -944,6 +956,7 @@ footer {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Issuer Text */
 .cert-card .issuer {
   font-size: 0.85rem;
   color: #666;
@@ -951,12 +964,14 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+/* Topics List */
 .cert-card .topics {
   font-size: 0.85rem;
   color: #333;
   line-height: 1.4;
 }
 
+/* Badge + Title Row */
 .cert-header {
   display: flex;
   align-items: center;
@@ -964,11 +979,186 @@ footer {
   margin-bottom: 0.4rem;
 }
 
+/* Badge Image */
 .cert-badge {
   width: 32px;
   height: 32px;
   object-fit: contain;
   border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+.cert-category {
+  grid-column: 1 / -1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: #333;
+  border-bottom: 2px solid #76c7c0;
+  padding-bottom: 0.3rem;
+}
+
+
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.edu-card {
+  background: #f9fbfd;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #76c7c0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.edu-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.edu-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.edu-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.edu-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.edu-badges span {
+  background: #e0f7f5;
+  color: #333;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 20px;
+}
+
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.exp-card {
+  background-color: #f9fbfd;
+  border-left: 4px solid #76c7c0;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.exp-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.exp-meta {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.exp-tasks {
+  font-size: 0.85rem;
+  color: #333;
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.exp-tasks li {
+  margin-bottom: 0.5rem;
+  list-style: disc;
+}
+
+
+.volunteering-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.vol-card {
+  background-color: #fdfdfd;
+  border-left: 4px solid #76c7c0;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vol-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.vol-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.vol-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.vol-meta {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.vol-tasks {
+  font-size: 0.85rem;
+  color: #333;
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.vol-tasks li {
+  margin-bottom: 0.5rem;
+  list-style: disc;
 }
 
