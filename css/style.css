@@ -490,66 +490,47 @@ section h2 {
   margin-left: 2rem;
 }
 
-/* Skills container should reset list styles */
-.section-content .skills-container {
-  margin: 0;
-  padding: 0;
- /* ← ADD THIS: turn it into a responsive 2-column grid */
+/* Skills Section */
+.new-skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
-/* Each skill row */
-.section-content .skill {
-  margin-bottom: 1rem;
+.skill-category h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #76c7c0;
+  padding-left: 0.5rem;
 }
 
-/* Skill title */
-.section-content .skill-name {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+.skill-tags {
+  list-style-type: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-/* Bar background */
-.section-content .skill-bar {
-  position: relative;
-  background: #e0e0e0;
-  border-radius: 25px;
-  overflow: hidden;
-  height: 20px;
+.skill-tags li {
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0.4rem 0.8rem;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
 }
 
-/* Animated fill */
-.section-content .skill-bar-fill {
-  background: #76c7c0;
-  height: 100%;
-  width: 0;
-  border-radius: 25px;
-  transition: width 1.2s ease-in-out;
+.skill-tags li:hover {
+  background-color: #76c7c0;
+  color: white;
+  cursor: default;
 }
 
-/* Optional: show percentage on hover */
-.section-content .skill-bar:hover .skill-bar-fill::after {
-  content: attr(data-percent);
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.8rem;
-  color: #fff;
-  font-weight: 600;
-}
 
-/* Make headings span the full width of the two-column grid */
-.section-content .skills-container h3 {
-  grid-column: 1 / -1;
-  margin-top: 2rem;    /* give some breathing room above each category */
-  font-size: 1.1rem;   /* tweak as you like */
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.25rem;
-}
 
  
 
@@ -931,3 +912,66 @@ footer {
 #form-status.error {
   color: #e04848; /* or another error shade you like */
 }
+
+
+/* CERTIFICATIONS SECTION */
+#certificates {
+  margin-top: 3rem;
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.cert-card {
+  background-color: #fafafa;
+  border-left: 4px solid #76c7c0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.cert-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cert-card .issuer {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.cert-card .topics {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.cert-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.cert-badge {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
