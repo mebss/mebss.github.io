@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Mehrab Bhuiyan – Projects</title>
+  <meta name="description" content="Software engineering, analytics, web, and teaching projects by Mehrab Bhuiyan.">
+  <meta property="og:title" content="Projects | Mehrab Bhuiyan">
+  <meta property="og:description" content="Selected full-stack, data analytics, web, and teaching projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Projects | Mehrab Bhuiyan</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mebss.com/projects.html">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -47,7 +55,7 @@
             <img class="icon" src="images/mail.png" alt="Email icon">
           </a>
           <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <img class="icon" src="images/linkedin.png" alt="LinkedIn icon">
           </a>
         </div>
@@ -69,25 +77,46 @@
         <div class="projects-grid">
 
           <article class="project-card">
+            <figure class="project-shot">
+              <img src="images/projects/medwell-final-design.png" alt="Medwell OS final design cover">
+            </figure>
+            <p class="project-kicker">Featured healthcare platform</p>
             <h3>Medwell Pharmacy Patient Portal</h3>
             <p>Advanced pharmacy portal—Medwell OS—that streamlines operations and enhances patient care with medication tracking, real-time interaction checks, and prescription-label printing.</p>
             <p class="correlation">Built during my Bachelor of Computer Science at Swinburne University, collaborating in a team to improve healthcare technology.</p>
+            <ul class="project-tags"><li>Full Stack</li><li>Healthcare</li><li>Team Project</li></ul>
+            <ul class="proof-list"><li>Demo video included</li><li>Medication safety workflow</li><li>Prescription label support</li></ul>
+            <a href="project-medwell.html" class="text-link">Case study</a>
             <button class="btn" id="view-demo-btn">View Demo</button>
           </article>
 
           <article class="project-card">
+          <figure class="project-shot">
+            <img src="images/projects/skylogistics-case-study.png" alt="Skylogistics travel website screenshot">
+          </figure>
+          <p class="project-kicker">Featured production site</p>
           <h3>Skylogistics – Multi-Language Travel Website</h3>
           <p>Static travel-agency site built with Astro + Tailwind, localized in English, Bengali, and Malay. Features reusable components, WhatsApp click-to-chat, and SEO optimization (OpenGraph, JSON-LD, hreflang).</p>
-          <p class="correlation">Independent build deployed on Cloudflare Pages with custom domain (skylogisticsmy.com), optimized for Lighthouse 95+ mobile performance and accessibility.</p>
-          <a href="https://skylogisticsmy.com" target="_blank" class="btn">Visit Site</a>
+          <p class="correlation">Independent build deployed on Cloudflare Pages with custom domain (skylogisticsmy.com/en/), optimized for Lighthouse 95+ mobile performance and accessibility.</p>
+          <ul class="project-tags"><li>Astro</li><li>Tailwind</li><li>SEO</li></ul>
+          <ul class="proof-list"><li>Live production website</li><li>English, Bengali, and Malay</li><li>Cloudflare Pages deployment</li></ul>
+          <a href="project-skylogistics.html" class="text-link">Case study</a>
+          <a href="https://skylogisticsmy.com/en/" target="_blank" rel="noopener" class="btn">Visit Site</a>
           </article>
 
 
           <article class="project-card">
+            <figure class="project-shot">
+              <img src="images/projects/mental-wellness-tracker.png" alt="Mental Wellness Tracker logged-in dashboard screenshot">
+            </figure>
+            <p class="project-kicker">Featured full-stack app</p>
             <h3>Mental Wellness Tracker App</h3>
             <p>Culture-inclusive mental wellness tracker integrating Te Tiriti o Waitangi principles. Full-stack development with secure data handling and an intuitive UI.</p>
             <p class="correlation">Completed as a group project for my MSE800 Professional Engineering course at Yoobee College.</p>
-            <a href="https://github.com/mebss/MSE-800-Professional-Engineering-Group-Project-/tree/main/mental_wellness_tracker" target="_blank" class="btn">View on GitHub</a>
+            <ul class="project-tags"><li>Full Stack</li><li>UX</li><li>Secure Data</li></ul>
+            <ul class="proof-list"><li>Culture-inclusive design</li><li>Secure data handling</li><li>Group delivery</li></ul>
+            <a href="project-mental-wellness.html" class="text-link">Case study</a>
+            <a href="https://github.com/mebss/MSE-800-Professional-Engineering-Group-Project-/tree/main/mental_wellness_tracker" target="_blank" rel="noopener" class="btn">View on GitHub</a>
           </article>
           
 
@@ -95,21 +124,29 @@
             <h3>Car Rental System (CLI)</h3>
             <p>Python CLI app with OOP design, UML diagrams, modular architecture, and robust error handling for a seamless rental workflow.</p>
             <p class="correlation">Developed as part of my Master’s Software Engineering coursework at Yoobee College.</p>
-            <a href="https://github.com/mebss/MSE800-Professional-Software-Engineering/tree/main/CarRentalSystem_Mehrab_Bhuiyan" target="_blank" class="btn">View on GitHub</a>
+            <ul class="project-tags"><li>Python</li><li>OOP</li><li>CLI</li></ul>
+            <a href="https://github.com/mebss/MSE800-Professional-Software-Engineering/tree/main/CarRentalSystem_Mehrab_Bhuiyan" target="_blank" rel="noopener" class="btn">View on GitHub</a>
           </article>
 
           <article class="project-card">
+            <figure class="project-shot">
+              <img src="images/projects/bus-tracking-system.png" alt="Bus Tracking System live Auckland map screenshot">
+            </figure>
             <h3>Bus Tracking System</h3>
             <p>PHP &amp; Dockerized full-stack app integrating live Auckland Transport data to auto-populate a map with real-time bus positions.</p>
             <p class="correlation">Capstone-style project in my MSE804 Intelligent Transportation Systems module at Yoobee College.</p>
-            <a href="https://github.com/mebss/Bustrackingapp" target="_blank" class="btn">View on GitHub</a>
+            <ul class="project-tags"><li>PHP</li><li>Docker</li><li>Transit Data</li></ul>
+            <ul class="proof-list"><li>Authenticated map view</li><li>Auckland route data</li><li>Journey planner navigation</li></ul>
+            <a href="project-bus-tracking.html" class="text-link">Case study</a>
+            <a href="https://github.com/mebss/Bustrackingapp" target="_blank" rel="noopener" class="btn">View on GitHub</a>
           </article>
 
           <article class="project-card">
             <h3>Fitness Tracker Data Modeling &amp; Responsible Data Report</h3>
             <p>Statistical analysis (regression, clustering) on fitness app data to predict engagement, plus ethical guidelines on anonymization and informed consent.</p>
             <p class="correlation">Produced for my MSE803 Data Analytics course, blending technical modeling with ethical best practices.</p>
-            <a href="https://github.com/mebss/MSE803_Data_Analytics/tree/main/Assessment%202" target="_blank" class="btn">View on GitHub</a>
+            <ul class="project-tags"><li>Analytics</li><li>Regression</li><li>Ethics</li></ul>
+            <a href="https://github.com/mebss/MSE803_Data_Analytics/tree/main/Assessment%202" target="_blank" rel="noopener" class="btn">View on GitHub</a>
           </article>
 
         </div>
@@ -124,21 +161,24 @@
             <h3>Turtle Snake Game</h3>
             <p>Classic Snake in Python using Turtle—arrow-key movement, dynamic food spawning, score tracking, and speed ramp-up.</p>
             <p class="correlation">Used as a hands-on demo in my Junior Technology Instructor role at Scratchpad NZ to teach event-driven programming with Turtle graphics.</p>
-            <a href="https://github.com/mebss/Turtle-Snake-Game" target="_blank" class="btn">View on GitHub</a>
+            <ul class="project-tags"><li>Python</li><li>Turtle</li><li>Teaching</li></ul>
+            <a href="https://github.com/mebss/Turtle-Snake-Game" target="_blank" rel="noopener" class="btn">View on GitHub</a>
           </article>
 
           <article class="project-card">
             <h3>Number Guessing Game</h3>
             <p>Terminal-based Python game: guess the sum of two dice with random animations and win/lose feedback.</p>
             <p class="correlation">Created as an interactive exercise at Scratchpad NZ to demonstrate randomness, loops, and user input handling.</p>
-            <a href="https://github.com/mebss/Number-Guessing-Game" target="_blank" class="btn">View on GitHub</a>
+            <ul class="project-tags"><li>Python</li><li>CLI</li><li>Beginner Friendly</li></ul>
+            <a href="https://github.com/mebss/Number-Guessing-Game" target="_blank" rel="noopener" class="btn">View on GitHub</a>
           </article>
 
           <article class="project-card">
             <h3>Library Management CLI</h3>
             <p>Python console application for admins &amp; members to manage books, registration, borrowing, and overdue reports, backed by CSV files.</p>
             <p class="correlation">Built for Scratchpad NZ workshops to illustrate file I/O and command-line interface design.</p>
-            <a href="https://github.com/mebss/Library-Management-CLI-" target="_blank" class="btn">View on GitHub</a>
+            <ul class="project-tags"><li>Python</li><li>CSV</li><li>File I/O</li></ul>
+            <a href="https://github.com/mebss/Library-Management-CLI-" target="_blank" rel="noopener" class="btn">View on GitHub</a>
           </article>
 
         </div>
@@ -149,10 +189,16 @@
         <div class="projects-grid">
 
           <article class="project-card">
+            <figure class="project-shot">
+              <img src="images/projects/enrich-academy-website.png" alt="Enrich Academy website homepage screenshot">
+            </figure>
             <h3>Enrich Academy Website</h3>
             <p>Responsive HTML/CSS/JavaScript site with a PHP &amp; MySQL–powered CMS, built to showcase course offerings, branch locations, and let staff update programs without touching code.</p>
             <p class="correlation">Developed for Enrich Academy to give them a modern, mobile-friendly web presence and an easy content-management system.</p>
-            <a href="https://enrichacademynz.co.nz" target="_blank" class="btn">
+            <ul class="project-tags"><li>PHP</li><li>MySQL</li><li>CMS</li></ul>
+            <ul class="proof-list"><li>Live production website</li><li>Admin content workflow</li><li>Responsive public pages</li></ul>
+            <a href="project-enrich-academy.html" class="text-link">Case study</a>
+            <a href="https://enrichacademynz.co.nz" target="_blank" rel="noopener" class="btn">
               Visit Enrich Academy
             </a>
           </article>
@@ -167,18 +213,22 @@
             <p class="correlation">
               Built as an interactive coding exercise for Year 12 Computer Science students at Enrich Academy, teaching data-driven design, OOP principles, and user interaction in Python.
             </p>
-            <a href="https://github.com/mebss/Text-Based-RPG" target="_blank" class="btn">View on GitHub</a>
+            <ul class="project-tags"><li>Python</li><li>JSON</li><li>Tkinter</li></ul>
+            <a href="https://github.com/mebss/Text-Based-RPG" target="_blank" rel="noopener" class="btn">View on GitHub</a>
           </article>
 
         </div>
       </section>
 
-      <!-- CURRENTLY DOING PROJECTS -->
+      <!-- IN PROGRESS PROJECTS -->
       <section id="currently-doing">
-        <h2>Currently Doing</h2>
+        <h2>In Progress</h2>
         <div class="projects-grid">
           
           <article class="project-card">
+          <div class="project-visual visual-intelligence" aria-hidden="true">
+            <span>NLP</span><span>Jobs</span><span>Insights</span>
+          </div>
           <h3>Job Market Intelligence &amp; Application Assistant</h3>
           <p>
             A full-stack platform to analyze NZ tech job trends, match resumes to roles via NLP, and track job applications with notes and status. 
@@ -187,6 +237,8 @@
           <p class="correlation">
             Built independently as a career analytics tool, not for mass applying, to support thoughtful, data-driven decision making during job hunting.
           </p>
+          <ul class="project-tags"><li>NLP</li><li>Analytics</li><li>Resume Parsing</li></ul>
+          <a href="project-job-market-intelligence.html" class="text-link">Case study</a>
           <button class="btn disabled" disabled>Private Project</button>
           </article>
 
@@ -194,6 +246,7 @@
             <h3>Side-Scroller Game</h3>
             <p>Python-based side-scroller with progressive combat mechanics, mob AI, collectible buffs, and boss encounters—built using Pygame for graphics and collision handling.</p>
             <p class="correlation">Personal project to deepen understanding of game loops, sprite management, and real-time user input in Python.</p>
+            <ul class="project-tags"><li>Python</li><li>Pygame</li><li>Game Loop</li></ul>
             <button class="btn disabled" disabled>GitHub Coming Soon</button>
           </article>
 
@@ -201,6 +254,7 @@
             <h3>Business Analytics Dashboard</h3>
             <p>End-to-end analytics pipeline: cleaned event data with Python, loaded into BigQuery, and visualized KPIs in Looker Studio to drive strategic insights.</p>
             <p class="correlation">Personal project to sharpen my data visualization and dashboard-building skills.</p>
+            <ul class="project-tags"><li>Python</li><li>BigQuery</li><li>Looker Studio</li></ul>
             <button class="btn disabled" disabled>GitHub Coming Soon</button>
           </article>
 
@@ -208,6 +262,7 @@
             <h3>Delta Lake ETL Pipeline</h3>
             <p>Automated ETL process ingesting cleaned JSON event exports into a Delta Lake table, with validation scripts to ensure data integrity and consistency.</p>
             <p class="correlation">Personal project to learn scalable data lake design and data integrity validation techniques.</p>
+            <ul class="project-tags"><li>ETL</li><li>Delta Lake</li><li>Validation</li></ul>
             <button class="btn disabled" disabled>GitHub Coming Soon</button>
           </article>
 
@@ -218,7 +273,14 @@
 
     <!-- FOOTER -->
     <footer>
-      <p>&copy; 2025 Mehrab Bhuiyan. All rights reserved.</p>
+      <div class="footer-inner">
+        <p>&copy; 2026 Mehrab Bhuiyan. Built with HTML, CSS, and JavaScript.</p>
+        <nav aria-label="Footer links">
+          <a href="mailto:hi@mebss.com">Email</a>
+          <a href="https://github.com/mebss" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+      </div>
     </footer>
 
   </div> <!-- end #page-content -->

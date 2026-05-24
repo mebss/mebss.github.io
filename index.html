@@ -3,8 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Mehrab Bhuiyan - Portfolio</title>
+  <meta name="description" content="Portfolio of Mehrab Bhuiyan, a software engineer and data analyst building full-stack applications, analytics workflows, and learning tools.">
+  <meta property="og:title" content="Mehrab Bhuiyan | Software Engineer & Data Analyst">
+  <meta property="og:description" content="Full-stack software, data analytics, ETL pipelines, and teaching-focused technology projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Mehrab Bhuiyan | Software Engineer & Data Analyst</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mebss.com/">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://mebss.com/#person",
+        "name": "Mehrab Bhuiyan",
+        "url": "https://mebss.com/",
+        "image": "https://mebss.com/images/profile.jpg",
+        "jobTitle": "Software Engineer and Data Analyst",
+        "email": "mailto:hi@mebss.com",
+        "sameAs": [
+          "https://github.com/mebss",
+          "https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/"
+        ],
+        "knowsAbout": ["Full-stack development", "Data analytics", "ETL pipelines", "Software engineering", "Technology education"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mebss.com/#website",
+        "url": "https://mebss.com/",
+        "name": "Mehrab Bhuiyan Portfolio",
+        "publisher": {"@id": "https://mebss.com/#person"}
+      },
+      {
+        "@type": "ItemList",
+        "name": "Selected projects",
+        "itemListElement": [
+          {"@type": "CreativeWork", "position": 1, "name": "Skylogistics Multi-Language Travel Website", "url": "https://mebss.com/project-skylogistics.html"},
+          {"@type": "CreativeWork", "position": 2, "name": "Medwell Pharmacy Patient Portal", "url": "https://mebss.com/project-medwell.html"},
+          {"@type": "CreativeWork", "position": 3, "name": "Job Market Intelligence and Application Assistant", "url": "https://mebss.com/project-job-market-intelligence.html"}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -20,12 +65,8 @@
         <button class="menu-close" aria-label="Close menu">✕</button>
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-          <li><a href="#volunteering">Volunteering</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -35,23 +76,25 @@
         <a href="mailto:hi@mebss.com" aria-label="Email">
           <img class="icon" src="images/mail.png" alt="Email icon">
         </a>
-        <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <img class="icon" src="images/linkedin.png" alt="LinkedIn icon">
         </a>
       </div>
 
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">☰</button>
     </div>
   </header>
 
 
-  <section id="about">
-    <h2>👨‍💻 About Me</h2>
+  <section id="about" class="hero-section">
     <div class="about-card">
       <div class="about-img-wrapper">
         <img src="images/profile.jpg" alt="Profile Picture of Mehrab Bhuiyan">
       </div>
       <div class="about-text section-content">
+       <p class="eyebrow">Software Engineer & Data Analyst</p>
+       <h2>Building practical software, analytics workflows, and learning tools.</h2>
+       <p class="availability">Open to software engineering, data analytics, and junior developer roles in Auckland or remote.</p>
        <p>
         Hi, I’m <strong>Mehrab Bhuiyan</strong> — a software engineer with a passion for building clean, efficient, and impactful technology. With hands-on industry and academic experience across full-stack development, data analytics, and tech education, I thrive at the intersection of creativity and logic.
       </p>
@@ -62,14 +105,101 @@
         I’m driven by continuous learning, and I love mentoring aspiring developers while staying on the edge of evolving tech and data pipelines.
       </p>
       <ul class="highlights">
-        <li>🎓 Master’s in Software Engineering (Completed 2025)</li>
-        <li>💻 2+ Years Full-Stack Development</li>
-        <li>📊 Data Analytics + ETL Pipelines</li>
-        <li>🎤 Tech Instructor & Workshop Facilitator</li>
-        <li>☁️ AWS, Docker & Modern DevOps</li>
+        <li>Master’s in Software Engineering (Completed 2025)</li>
+        <li>2+ Years Full-Stack Development</li>
+        <li>Data Analytics + ETL Pipelines</li>
+        <li>Tech Instructor & Workshop Facilitator</li>
+        <li>AWS, Docker & Modern DevOps</li>
       </ul>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn btn-primary">View Projects</a>
+        <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+        <a href="assets/mehrab-bhuiyan-cv.pdf" class="btn btn-secondary">Download CV</a>
+        <a href="cv-mehrab-bhuiyan.html" class="btn btn-secondary">View CV</a>
+        <a href="https://github.com/mebss" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+      </div>
 
       </div>
+    </div>
+  </section>
+
+  <section id="selected-projects">
+    <div class="section-heading-row">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects with clear product, data, and engineering value.</h2>
+      </div>
+      <a href="projects.html" class="text-link">All projects</a>
+    </div>
+    <div class="featured-grid">
+      <article class="project-card featured-card">
+        <figure class="project-shot">
+          <img src="images/projects/skylogistics-case-study.png" alt="Skylogistics travel website screenshot">
+        </figure>
+        <p class="project-kicker">Production website</p>
+        <h3>Skylogistics Multi-Language Travel Website</h3>
+        <p>Astro and Tailwind site with English, Bengali, and Malay localization, WhatsApp conversion flow, and SEO metadata.</p>
+        <ul class="project-tags"><li>Astro</li><li>Tailwind</li><li>Cloudflare</li></ul>
+        <ul class="proof-list"><li>Live deployment</li><li>Multi-language SEO</li><li>WhatsApp conversion path</li></ul>
+        <a href="project-skylogistics.html" class="btn">Read Case Study</a>
+      </article>
+
+      <article class="project-card featured-card">
+        <figure class="project-shot">
+          <img src="images/projects/medwell-final-design.png" alt="Medwell OS final design cover">
+        </figure>
+        <p class="project-kicker">Healthcare platform</p>
+        <h3>Medwell Pharmacy Patient Portal</h3>
+        <p>Patient portal concept focused on medication tracking, interaction checks, and operational workflows for pharmacy teams.</p>
+        <ul class="project-tags"><li>Full Stack</li><li>Healthcare</li><li>UX</li></ul>
+        <ul class="proof-list"><li>Demo video available</li><li>Team delivery</li><li>Clinical workflow focus</li></ul>
+        <a href="project-medwell.html" class="btn">Read Case Study</a>
+      </article>
+
+      <article class="project-card featured-card">
+        <div class="project-visual visual-intelligence" aria-hidden="true">
+          <span>NLP</span><span>Jobs</span><span>Insights</span>
+        </div>
+        <p class="project-kicker">In progress</p>
+        <h3>Job Market Intelligence & Application Assistant</h3>
+        <p>Career analytics platform for job trend analysis, resume matching, skill gaps, and application tracking.</p>
+        <ul class="project-tags"><li>NLP</li><li>Analytics</li><li>Product</li></ul>
+        <ul class="proof-list"><li>Private build</li><li>Resume matching</li><li>Application reporting</li></ul>
+        <a href="project-job-market-intelligence.html" class="btn">Read Case Study</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="now">
+    <div class="section-heading-row">
+      <div>
+        <p class="eyebrow">Now</p>
+        <h2>Currently focused on practical engineering, analytics, and teaching work.</h2>
+      </div>
+    </div>
+    <div class="now-grid">
+      <article>
+        <h3>Building</h3>
+        <p>Career analytics tools that combine job market research, resume matching, application tracking, and exportable reporting.</p>
+      </article>
+      <article>
+        <h3>Teaching</h3>
+        <p>Computer science, Python, algorithms, and structured problem solving for learners in Auckland.</p>
+      </article>
+      <article>
+        <h3>Available For</h3>
+        <p>Software engineering, junior developer, data analytics, and web/product roles in Auckland or remote.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="references">
+    <div class="section-heading-row">
+      <div>
+        <p class="eyebrow">References</p>
+        <h2>Professional and academic references available on request.</h2>
+      </div>
+      <a href="contact.html" class="text-link">Request details</a>
     </div>
   </section>
 
@@ -127,10 +257,10 @@
           </div>
         </div>
         <ul class="exp-tasks">
-          <li>Built and maintained ETL pipelines for Amplitude & MySQL.</li>
-          <li>Developed internal dashboards and partner reports.</li>
-          <li>Performed behavioral analysis and A/B testing.</li>
-          <li>Presented data insights to stakeholders for product decisions.</li>
+          <li>Built and maintained ETL pipelines for Amplitude and MySQL to support product reporting.</li>
+          <li>Developed internal dashboards and partner reports for stakeholder review.</li>
+          <li>Analyzed behavior patterns and A/B test results to identify product opportunities.</li>
+          <li>Presented insights that supported product and partner decision-making.</li>
         </ul>
       </div>
 
@@ -144,9 +274,9 @@
     </div>
   </div>
   <ul class="exp-tasks">
-    <li>Delivered instruction in Computer Science, teaching Python programming, algorithms, and data representation at IGCSE and AS Level.</li>
-    <li>Guided students through debugging, logical problem-solving, and structured coding practices to help them build technical confidence.</li>
-    <li>Designed technical learning materials including coding exercises, assessments, and project-based tasks aligned with Cambridge standards.</li>
+    <li>Teach Python, algorithms, and data representation for IGCSE and AS Level Computer Science students.</li>
+    <li>Coach students through debugging, logical problem-solving, and structured coding habits.</li>
+    <li>Design coding exercises, assessments, and project-based tasks aligned with Cambridge standards.</li>
     <li>Supported digital infrastructure by configuring network and Wi-Fi systems used for classroom operations.</li>
     <li>Taught additional subjects including Mathematics, Physics, and English while reinforcing analytical thinking and problem-solving skills.</li>
   </ul>
@@ -162,9 +292,9 @@
           </div>
         </div>
         <ul class="exp-tasks">
-          <li>Taught programming using Python, Scratch, and Arduino.</li>
-          <li>Led project-based classes to build creativity and logic.</li>
-          <li>Provided feedback and updates to parents regularly.</li>
+          <li>Taught Python, Scratch, and Arduino through hands-on programming projects.</li>
+          <li>Led project-based classes that developed logic, creativity, and confidence.</li>
+          <li>Provided regular feedback to parents on learner progress and next steps.</li>
         </ul>
       </div>
 
@@ -206,126 +336,30 @@
 
 
   <section id="skills">
-  <h2>Skills</h2>
-  <div class="section-content new-skills-grid">
-
-    <div class="skill-category">
-      <h3>Programming</h3>
-      <ul class="skill-tags">
-        <li>Python</li>
-        <li>C/C++</li>
-        <li>Java</li>
-        <li>PHP</li>
-        <li>JavaScript</li>
-        <li>HTML/CSS</li>
-        <li>Kotlin</li>
-        <li>Rust</li>
-        <li>Arduino</li>
-        <li>LaTeX</li>
-      </ul>
+    <div class="section-heading-row">
+      <div>
+        <p class="eyebrow">Most used stack</p>
+        <h2>Tools I reach for in recent software, analytics, and teaching work.</h2>
+      </div>
     </div>
-
-    <div class="skill-category">
-      <h3>Frameworks / Tools</h3>
-      <ul class="skill-tags">
-        <li>Astro</li>
-        <li>TailwindCSS</li>
-        <li>Laravel</li>
-        <li>Vue.js</li>
-        <li>Git</li>
-        <li>Docker</li>
-        <li>MySQL</li>
-        <li>Firebase</li>
-        <li>Flask</li>
-        <li>Pygame</li>
-        <li>Streamlit</li>
-        <li>Power BI</li>
-        <li>Looker Studio</li>
-      </ul>
+    <div class="stack-focus">
+      <article class="skill-category">
+        <h3>Application Development</h3>
+        <p>Python, JavaScript, PHP, HTML/CSS, Astro, TailwindCSS, Flask, Laravel, Vue.js.</p>
+      </article>
+      <article class="skill-category">
+        <h3>Data & Analytics</h3>
+        <p>SQL, MySQL, BigQuery, Amplitude, Power BI, Looker Studio, data cleaning, ETL pipelines.</p>
+      </article>
+      <article class="skill-category">
+        <h3>Delivery & Infrastructure</h3>
+        <p>Git, Docker, Cloudflare Pages, Linux, AWS/GCP fundamentals, CI/CD workflows.</p>
+      </article>
+      <article class="skill-category">
+        <h3>Teaching & Collaboration</h3>
+        <p>Lesson planning, debugging coaching, workshop facilitation, stakeholder reporting, technical documentation.</p>
+      </article>
     </div>
-
-    <div class="skill-category">
-      <h3>Web / SEO</h3>
-      <ul class="skill-tags">
-        <li>i18n Localization</li>
-        <li>Responsive Design</li>
-        <li>JSON-LD</li>
-        <li>OpenGraph</li>
-        <li>Lighthouse Optimization</li>
-      </ul>
-    </div>
-
-    <div class="skill-category">
-      <h3>Analytics / ETL</h3>
-      <ul class="skill-tags">
-        <li>BigQuery</li>
-        <li>Excel</li>
-        <li>SQL</li>
-        <li>JSON</li>
-        <li>PowerShell</li>
-        <li>Amplitude</li>
-        <li>Data Cleaning</li>
-        <li>ETL Pipelines</li>
-        <li>Data Visualization</li>
-      </ul>
-    </div>
-
-    <div class="skill-category">
-      <h3>Cloud / Platforms</h3>
-      <ul class="skill-tags">
-        <li>Cloudflare Pages</li>
-        <li>GCP</li>
-        <li>AWS</li>
-        <li>Ubuntu</li>
-        <li>Linux (CLI)</li>
-        <li>User Management</li>
-      </ul>
-    </div>
-
-    <div class="skill-category">
-      <h3>DevOps / SysAdmin</h3>
-      <ul class="skill-tags">
-        <li>CI/CD</li>
-        <li>DevOps</li>
-        <li>Infrastructure as Code (IaC)</li>
-        <li>Linux System Administration</li>
-      </ul>
-    </div>
-
-    <div class="skill-category">
-      <h3>Soft Skills</h3>
-      <ul class="skill-tags">
-        <li>Leadership</li>
-        <li>Communication</li>
-        <li>Time Management</li>
-        <li>Problem Solving</li>
-        <li>Collaboration</li>
-        <li>Adaptability</li>
-      </ul>
-    </div>
-
-    <div class="skill-category">
-      <h3>Teaching</h3>
-      <ul class="skill-tags">
-        <li>Lesson Planning</li>
-        <li>Tutoring</li>
-        <li>Classroom Management</li>
-        <li>Curriculum Design</li>
-        <li>Story Writing</li>
-        <li>Workshop Facilitation</li>
-      </ul>
-    </div>
-
-  </div>
-  </section>
-
-
-
-  <!-- PROJECTS PREVIEW -->
-  <section id="projects-preview">
-    <h2>Featured Projects</h2>
-    <p>Check out a selection of my professional and side projects.</p>
-    <a href="projects.html" class="btn">View All Projects →</a>
   </section>
 
   <section id="certificates">
@@ -335,7 +369,7 @@
       <!-- Cloud & AI -->
       <h3 class="cert-category">Cloud & AI</h3>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/e59e7c75b65c0c6c514d7e47026830873472940c14938042fc61dce82cb5759e" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/e59e7c75b65c0c6c514d7e47026830873472940c14938042fc61dce82cb5759e" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/azure.png" alt="Azure Badge">
@@ -346,7 +380,7 @@
         </div>
       </a>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/997ffd74c20a1f04002a48620de2d59a5a631caa8bd7280422de8813486846f1" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/997ffd74c20a1f04002a48620de2d59a5a631caa8bd7280422de8813486846f1" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/weaviate.png" alt="Vector Database Badge">
@@ -360,7 +394,7 @@
       <!-- Data Science & Analytics -->
       <h3 class="cert-category">Data Science & Analytics</h3>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/e4dad6256cb02e7515b93b0fc9f4f3c7b6f2dd6f1c4cc2603ce8a625135837d3" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/e4dad6256cb02e7515b93b0fc9f4f3c7b6f2dd6f1c4cc2603ce8a625135837d3" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/knime.png" alt="KNIME Badge">
@@ -371,7 +405,7 @@
         </div>
       </a>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/1f25dcc44dd228524f463de3f96e239fef960ccb13bc7c69082c2044f09efc5c" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/1f25dcc44dd228524f463de3f96e239fef960ccb13bc7c69082c2044f09efc5c" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/microsoft.png" alt="Data Analysis Badge">
@@ -382,7 +416,7 @@
         </div>
       </a>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/5533baa093bbcf74d138086e74ab51a92761ef8beee11efba397ef4b97555019?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BTDeyQtElRa%2BgeZCw%2BVMVPw%3D%3D" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/5533baa093bbcf74d138086e74ab51a92761ef8beee11efba397ef4b97555019?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BTDeyQtElRa%2BgeZCw%2BVMVPw%3D%3D" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/anaconda.png" alt="Anaconda Badge">
@@ -397,7 +431,7 @@
       <!-- DevOps & Infrastructure -->
       <h3 class="cert-category">DevOps & Infrastructure</h3>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/9a0325fba9c534d2f3be382c76c384cd7d84fae8f5280fb524d262fb0c8c7284" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/9a0325fba9c534d2f3be382c76c384cd7d84fae8f5280fb524d262fb0c8c7284" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/devops.png" alt="DevOps Badge">
@@ -408,7 +442,7 @@
         </div>
       </a>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/c5eafcde0d1290ee376d6c8567a9cfd9ca1dfef8af08e47a75e64d7d2e3f4732" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/c5eafcde0d1290ee376d6c8567a9cfd9ca1dfef8af08e47a75e64d7d2e3f4732" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/docker.png" alt="Docker Badge">
@@ -419,7 +453,7 @@
         </div>
       </a>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/4dda1cb5b04b62638faceeb5b77dcf27535afa8c3c0d297be47f235b29e747a5" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/4dda1cb5b04b62638faceeb5b77dcf27535afa8c3c0d297be47f235b29e747a5" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/ubuntu.png" alt="Ubuntu Badge">
@@ -430,7 +464,7 @@
         </div>
       </a>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/2f0124b31bbf52da00f3a774b9acf15ebb09c1e7fcad4ad0b96a40dcfb455352" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/2f0124b31bbf52da00f3a774b9acf15ebb09c1e7fcad4ad0b96a40dcfb455352" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/github.png" alt="GitHub Badge">
@@ -444,7 +478,7 @@
       <!-- Programming Foundations -->
       <h3 class="cert-category">Programming Foundations</h3>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/c9cfb4581881488015d15ea147f32f4ccd0140a55c62c400e938931f8cd10c3d" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/c9cfb4581881488015d15ea147f32f4ccd0140a55c62c400e938931f8cd10c3d" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/cpp.png" alt="C++ Badge">
@@ -455,7 +489,7 @@
         </div>
       </a>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/d47b91263bd837acb23565feb2cb69adcdb7fde471f169eda4a68406be8b5fb9" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/d47b91263bd837acb23565feb2cb69adcdb7fde471f169eda4a68406be8b5fb9" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/java.png" alt="Java Badge">
@@ -466,7 +500,7 @@
         </div>
       </a>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/faf1834277e7af97f3eaee8878390073e642fdae7896fa351aa43b32489031b3" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/faf1834277e7af97f3eaee8878390073e642fdae7896fa351aa43b32489031b3" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/js.png" alt="JavaScript Badge">
@@ -477,7 +511,7 @@
         </div>
       </a>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/fd1d6bf47e946eaa00baf21ed3155899ecb6f9b50819d63897af798734a53be7" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/fd1d6bf47e946eaa00baf21ed3155899ecb6f9b50819d63897af798734a53be7" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/microsoft.png" alt="Software Dev Badge">
@@ -490,7 +524,7 @@
       <!-- Software Testing & QA -->
       <h3 class="cert-category">Software Testing & QA</h3>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/c52890465263217da17580cbccd10b3cafdeeb2b9ea190076dc0557ea0ecb2ba" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/c52890465263217da17580cbccd10b3cafdeeb2b9ea190076dc0557ea0ecb2ba" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/lambda.png" alt="LambdaTest Badge">
@@ -505,7 +539,7 @@
       <!-- IT & Leadership -->
       <h3 class="cert-category">IT & Leadership</h3>
 
-      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/539a71fbf70b1417c83c098618a3c14ff8437a198d9a59ef1ae8b18dc97863f2" target="_blank">
+      <a class="cert-link" href="https://www.linkedin.com/learning/certificates/539a71fbf70b1417c83c098618a3c14ff8437a198d9a59ef1ae8b18dc97863f2" target="_blank" rel="noopener">
         <div class="cert-card">
           <div class="cert-header">
             <img class="cert-badge" src="images/badges/servicenow.png" alt="ServiceNow Badge">
@@ -580,7 +614,14 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Mehrab Bhuiyan. All rights reserved.</p>
+    <div class="footer-inner">
+      <p>&copy; 2026 Mehrab Bhuiyan. Built with HTML, CSS, and JavaScript.</p>
+      <nav aria-label="Footer links">
+        <a href="mailto:hi@mebss.com">Email</a>
+        <a href="https://github.com/mebss" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/mehrab-bhuiyan-07425a181/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
   </footer>
 
   <!-- SCRIPTS -->
